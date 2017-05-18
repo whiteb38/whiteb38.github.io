@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile": "webpack",
+    "compile": "webpack --progress -d",
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/whiteb38/whiteb38.github.io/issues"
   },
-  "homepage": "https://github.com/whiteb38/whiteb38.github.io#readme",
+  "homepage": "https://whiteb38.github.io/whiteb38.github.io",
   "dependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
