@@ -14,8 +14,8 @@ class Counter extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
   handleAdd(e){
-    let countAdd = this.state.count;
-    let amountAdd = this.state.amount;
+    let countAdd = parseInt(this.state.count);
+    let amountAdd = parseInt(this.state.amount);
     let sum = countAdd + amountAdd;
     this.setState({count: sum});
   }
