@@ -1,11 +1,12 @@
 console.log('Hello World!');
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import Counter from './Counter';
+import HomeView from './HomeView';
+import 'bootstrap/dist/css/bootstrap.css';
 
 document.addEventListener('DOMContentLoaded', function(){
   ReactDOM.render(
-    React.createElement(Counter),
+    <HomeView />,
     document.getElementById('mount')
   );
 });
