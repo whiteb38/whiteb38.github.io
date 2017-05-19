@@ -25,10 +25,10 @@ class Header extends React.Component {
               </ul>
               <ul className="nav navbar-nav navbar-right">
                 <li>
-                  <a href="www.github.com/whiteb38">Github</a>
+                  <a href="www.github.com/whiteb38" rel="external">Github</a>
                 </li>
                 <li>
-                  <a href="www.linkedIn.com">LinkedIn</a>
+                  <a href="www.linkedIn.com" rel="external">LinkedIn</a>
                 </li>
               </ul>
             </div>
