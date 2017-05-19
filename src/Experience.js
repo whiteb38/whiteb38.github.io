@@ -25,7 +25,7 @@ class Experience extends React.Component {
       </div>
     </div>
   </div>
-  <div className="col-sm-6">
+  <div className="col-sm-6" >
     <div className="card" style={cardStyle}>
       <div className="card-block" style={cardBlockStyle}>
         <h4 className="card-title">Skills</h4>

@@ -20,7 +20,7 @@ class ProjectTwo extends React.Component {
             </p>
           </div>
           <div className="col-md-5 col-md-pull-7">
-            <img className="featurette-image img-responsive center-block" style={{borderRadius: "15px"}} data-src="holder.js/500x500/auto" alt="500x500" src="../extra/placeholder.png" data-holder-rendered="true" />
+            <img className="featurette-image img-responsive center-block" style={{borderRadius: "15px", maxWidth: "80%"}}src="../extra/placeholder.png" data-holder-rendered="true" />
           </div>
         </div>
     );

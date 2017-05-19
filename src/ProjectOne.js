@@ -12,15 +12,15 @@ class ProjectOne extends React.Component {
         <div className="row featurette">
           <div className="col-md-7">
             <h2 className="featurette-heading">
-              First feature heading.
-              <span style={{color: "#565656"}}> Itll blow your mind!</span>
+              Responsive Web App
+              <span style={{color: "#565656"}}> MEAN stack</span>
             </h2>
             <p className="lead">
-              Project info goes here; Details about the project; Tech stack, libraries, and more is all included; blah blah blah
+              Responsive web app built with AngularJS, Express, Node.js. Scales based on data. To be used by multiple sales teams accross global company as customer facing employee portal.
             </p>
           </div>
           <div className="col-md-5">
-            <img className="featurette-image img-responsive center-block" style={{borderRadius: "15px"}} data-src="holder.js/500x500/auto" alt="500x500" src="../extra/placeholder.png" data-holder-rendered="true" />
+            <img className="featurette-image img-responsive center-block" style={{borderRadius: "15px", maxWidth: "80%"}} src="../extra/placeholder.png" data-holder-rendered="true" />
           </div>
         </div>
     );

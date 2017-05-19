@@ -11,23 +11,23 @@ class About extends React.Component {
     var cardStyle={ borderRadius:"15px", position: "relative", display:"flex", flexDirection:"column", backgroundColor: "white", border:"1px solid", padding: "0px"};
     var cardBlockStyle={padding:"15px"};
     return(
-      <div className="container">
+      <div className="container" style={{overflow:"hidden"}}>
         <div className="row">
-          <div className="col-sm-2 col-xs-12">
+          <div className="col-sm-2 col-xs-12" style={{float: "left"}}>
             <div className="card">
               <div className="card-block">
-                <img className="card-img-top img-responsive" data-src="holder.js/auto" src="../extra/work_pic.jpg" alt="Card image cap" style={{backgroundSize: "contain", borderRadius: "15px"}}/>
+                <img className="card-img-top img-responsive" data-src="holder.js/auto" src="../extra/work_pic.jpg" alt="Card image cap" style={{backgroundSize: "contain", borderRadius: "15px", MaxWidth: "80%", height: "auto"}}/>
               </div>
             </div>
           </div>
           <br />
-          <div className="col-sm-10">
+          <div className="col-sm-10" style={{float: "right"}}>
             <div className="card" style={{textAlign: "center", verticalAlign: "middle"}}>
               <div className="card-block" style={cardBlockStyle}>
                 <p className="card-text" style={{fontSize: "16px", color: "white", textShadow: "3px 3px 0px #000"}}>I am passionate, a quick learner, and a self-starter looking to leverage my technical and leadership skills on an agile development team.
                                         Skilled in full stack JS, HTML/CSS, SQL. Experienced in working on a scrum team, developing business plans, functional testing & requirements gathering.
                                         Interested in a challenging technical career in a development environment with learning opportunities.</p>
-                <p style={{fontWeight: "bold", fontSize: "16px", color: "white", textShadow: "3px 3px 0px #000"}}>Looking for Front End Engineering / Web Development roles </p>
+                <p style={{fontWeight: "bold", fontSize: "16px", color: "white", textShadow: "3px 3px 0px #000"}}>Looking for Front End Engineering / Web Development opportunities </p>
               </div>
             </div>
           </div>
