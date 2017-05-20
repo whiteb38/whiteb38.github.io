@@ -27,10 +27,12 @@ class Header extends React.Component {
                 </ul>
                 <ul className="nav navbar-nav navbar-right" style={{paddingTop: "5px"}}>
                   <li>
-                    <a href="https://www.github.com/whiteb38" style={headerStyle}>Github</a>
+                    <a href="https://www.github.com/whiteb38" target="_blank" style={{backgroundImage:"url(../extra/Webp.net-resizeimage.png)", width:"90px", height:"20px", backgroundRepeat: "no-repeat", marginTop:"6px", marginRight:"20px"}}>
+                    </a>
                   </li>
                   <li>
-                    <a href="https://www.linkedin.com/in/brendon-white-55896b58/" style={headerStyle}>LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/brendon-white-55896b58/" target="_blank" style={{backgroundImage:"url(../extra/Logo-2C-21px-TM.png)", width:"100px", height:"20px", backgroundRepeat: "no-repeat", marginTop:"14px"}}>
+                    </a>
                   </li>
                 </ul>
               </div>
