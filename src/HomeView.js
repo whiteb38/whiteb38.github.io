@@ -6,13 +6,14 @@ import About from './About';
 import ProjectOne from './ProjectOne';
 import ProjectTwo from './ProjectTwo';
 import Experience from './Experience';
+import Chart from './Chart';
 import 'bootstrap/dist/css/bootstrap.css';
 
 class HomeView extends React.Component {
   render(){
     return(
       <div >
-          <div style={{backgroundImage: "url(../extra/landscapePicture.jpg)", padding: "20px", borderRadius: "5px", height:"500px", backgroundPosition: "center", backgroundRepeat: "no-repeat"}}>
+          <div style={{backgroundImage: "url(../extra/landscapePicture.jpg)", padding: "20px", borderRadius: "15px", height:"500px", backgroundPosition: "center", backgroundRepeat: "no-repeat"}}>
           <Header />
           <div className="container" style={{marginTop:"100px"}}>
           <About />
@@ -28,6 +29,10 @@ class HomeView extends React.Component {
               <hr/>
               <br />
               <ProjectTwo />
+              <br />
+              <hr />
+              <br />
+              <Chart />
             </div>
           </div>
         </div>
