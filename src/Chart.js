@@ -13,7 +13,16 @@ class Chart extends React.Component {
 
     return(
       <div className="row featurette">
-      <div className="col-md-7">
+        <div className="col-md-7">
+          <h2 className="featurette-heading">
+            VictoryJS Example
+            <span style={{color: "#565656"}}> Static data</span>
+          </h2>
+          <p className="lead">
+            Responsive web app built with AngularJS, Express, Node.js. Scales based on data. To be used by multiple sales teams accross global company as customer facing employee portal.
+          </p>
+        </div>
+      <div className="col-md-5">
       <VictoryBar
         data={[
           {x: 1, y: 10, label: "ReactJS"},
@@ -59,6 +68,7 @@ class Chart extends React.Component {
 
       />
         </div>
+
       </div>
 );
 }
