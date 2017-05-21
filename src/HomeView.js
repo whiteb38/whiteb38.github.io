@@ -33,7 +33,7 @@ class HomeView extends React.Component {
               <ProjectTwo />
             </div>
           </div>
-          <div style={{backgroundImage: "url(../extra/pexels-photo.jpg)", filter: "grayscale(100%)",padding:"20px", borderRadius:"25px", height:"600px", width:"100%", backgroundPosition:"center", backgroundRepeat:"no-repeat"}}>
+          <div style={{backgroundImage: "url(../extra/pexels-photo.jpg)", filter: "grayscale(100%)",padding:"20px", borderRadius:"15px", height:"600px", width:"100%", backgroundPosition:"center", backgroundRepeat:"no-repeat"}}>
             <div className="container" >
               <br /><br/>
               <Blurb />
