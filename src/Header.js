@@ -37,7 +37,7 @@ class Header extends React.Component {
                     <a href="#ProjectTwo" style={headerStyle}>Project 2</a>
                   </li>
                 </ul>
-                <ul className="nav navbar-nav navbar-right hidden-xs" style={{paddingTop: "5px", marginRight:"80px"}}>
+                <ul className="nav navbar-nav navbar-right" style={{paddingTop: "5px", marginRight:"80px"}}>
                   <li>
                     <a  href="https://www.github.com/whiteb38" target="_blank" style={{backgroundImage:"url(../extra/Webp.net-resizeimage.png)", width:"90px", height:"20px", backgroundRepeat: "no-repeat", marginTop:"6px", marginRight:"20px"}}>
                     </a>
