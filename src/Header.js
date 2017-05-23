@@ -45,27 +45,23 @@ class Header extends React.Component {
                   </a>
                   <div className="collapse navbar-collapse " >
                     <ul className="navbar-nav hidden-xs">
-                      <li className="navbar-item" style={{marginLeft:"70px"}}><a href="#">Experience</a></li>
+                      <li className="navbar-item" style={{paddingLeft:""}}><a href="#">Experience</a></li>
                       <li className="navbar-item"><a href="#">Projects</a></li>
                       <li className="navbar-item"><a href="#">Frameworks</a></li>
-                      <li className="navbar-item">
+                      <li className="navbar-item hidden-md hidden-sm hidden-xs">
                         <a  href="https://www.github.com/whiteb38" target="_blank">
                           <img src="../extra/Webp.net-resizeimage.png" style={{width:"100px", height:"40px", marginTop:"-10px"}} />
                         </a>
                       </li>
-                      <li className="navbar-item">
+                      <li className="navbar-item hidden-md hidden-sm hidden-xs">
                         <a  href="https://www.linkedin.com/in/brendon-white-55896b58/" target="_blank">
                           <img src="../extra/Logo-2C-21px-TM.png" style={{width:"100px", height:"20px", marginTop:"-5px"}} />
                         </a>
                       </li>
                     </ul>
                   </div>
-                  <div className="visible-xs hidden-sm hidden-md hidden-lg hidden-xl" style={{marginLeft:"150px", marginTop:"-20px"}}>
-                    <DropdownButton  title="Menu" id="Menu" style={{height:"50px", backgroundColor: "white"}}>
-                      <MenuItem id="menuItem" href="/Experience">Experience</MenuItem>
-                      <MenuItem id="menuItem" href="/Projects">Projects</MenuItem>
-                      <MenuItem id="menuItem" href="/Frameworks">Frameworks</MenuItem>
-                      <MenuItem divider />
+                  <div className="visible-xs visible-sm visible-md hidden-lg hidden-xl" style={{marginLeft:"750px", marginTop:"-35px"}}>
+                    <DropdownButton  title="Menu" id="Menu" pullRight style={{height:"50px", backgroundColor: "white"}}>
                       <MenuItem id="menuItem" href="https://www.github.com/whiteb38">Github</MenuItem>
                       <MenuItem id="menuItem" href="https://www.linkedin.com/in/brendon-white-55896b58/">LinkedIn</MenuItem>
                     </DropdownButton>
