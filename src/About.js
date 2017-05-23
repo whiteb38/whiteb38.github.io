@@ -19,7 +19,7 @@ class About extends React.Component {
           <div className="col-sm-2 col-xs-12" style={{float: "left"}}>
             <div className="card">
               <div className="card-block">
-                <img className="card-img-top img-responsive hidden-xs" data-src="holder.js/auto" src="../extra/work_pic.jpg" alt="Card image cap" style={{backgroundSize: "contain", borderRadius: "15px", MaxWidth: "80%", height: "auto"}}/>
+                <img className="card-img-top img-responsive hidden-xs" data-src="holder.js/auto" src="../extra/work_pic.jpg" alt="Card image cap" style={{marginTop:"30px",backgroundSize: "contain", borderRadius: "15px", MaxWidth: "80%", height: "auto"}}/>
               </div>
             </div>
           </div>
