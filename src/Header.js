@@ -45,7 +45,7 @@ class Header extends React.Component {
                   </a>
                   <div className="collapse navbar-collapse " >
                     <ul className="navbar-nav hidden-xs">
-                      <li className="navbar-item" style={{paddingLeft:"30px"}}><a href="#">Experience</a></li>
+                      <li className="navbar-item" style={{marginLeft:"70px"}}><a href="#">Experience</a></li>
                       <li className="navbar-item"><a href="#">Projects</a></li>
                       <li className="navbar-item"><a href="#">Frameworks</a></li>
                       <li className="navbar-item">
