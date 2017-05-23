@@ -40,7 +40,7 @@ class Header extends React.Component {
           <nav className={scrollClass} id='nav'>
 
                 <a className="navbar-brand">
-                    <img className="d-inline-block align-top visible-md visible-lg visible-xl visible-sm visible-xs"src="../extra/bw_logo.png" style={{width:"100px", height:"80px"}}>
+                    <img className="d-inline-block align-top"src="../extra/bw_logo.png" style={{width:"100px", height:"80px"}}>
                     </img>
                   </a>
                   <div className="collapse navbar-collapse " >
