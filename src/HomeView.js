@@ -14,13 +14,9 @@ class HomeView extends React.Component {
   render(){
     return(
       <div >
-          <div style={{backgroundImage: "url(../extra/landscapePicture.jpg)", padding: "20px", borderRadius: "15px", height:"650px", backgroundPosition: "center", backgroundRepeat: "no-repeat"}}>
-            <Header />
-            <div className="container" style={{marginTop:"100px"}}>
-              <br /><br/>
+        <Header/>
               <About />
-            </div>
-          </div>
+
           <div className="container" style={{padding: "20px"}}>
             <Experience />
           </div>
@@ -43,8 +39,8 @@ class HomeView extends React.Component {
             <div className="container marketing" style={{padding:"20px", backgroundColor: 'white', borderRadius:"5px"}}>
               <Chart />
             </div>
-          </div>
         </div>
+    </div>
     );
   }
 }

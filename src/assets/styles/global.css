@@ -13,3 +13,49 @@
 body {
   font-family: 'Ubuntu';
 }
+
+
+.opaque-navbar {
+    background-color: rgba(0,0,0,0.0);
+  /* Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)  */
+    height: 110px;
+    border-bottom: 0px;
+    transition: background-color .5s ease 0s;
+    border-radius: 15px;
+}
+.opaque-navbar li a:hover{
+    color:#fff;
+}
+.opaque-navbar li a{
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    padding:14px 10px;
+    text-transform: uppercase;
+}
+.opaque-navbar ul {
+  list-style: none;
+  margin-top: 45px;
+}
+.opaque-navbar li {
+  display: inline-block;
+}
+#navDiv {
+  padding-left: 20px;
+}
+
+.opaque-navbar.opaque{
+  background-color: #008489;
+   height: 110px;
+   transition: background-color .5s ease 0s;
+}
+
+.opaque-navbar.torquoise{
+  background-color: #008489;
+   height: 110px;
+   transition: background-color .5s ease 0s;
+}
+#menuItem{
+  color: black;
+  font-size: 14px;
+}

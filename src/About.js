@@ -12,8 +12,10 @@ class About extends React.Component {
     var cardStyle={ borderRadius:"15px", position: "relative", display:"flex", flexDirection:"column", backgroundColor: "white", border:"1px solid", padding: "0px"};
     var cardBlockStyle={padding:"10px"};
     return(
+      <div>
+        <div style={{backgroundColor: "#008489",  borderRadius: "15px", height:"500px", backgroundRepeat: "no-repeat"}}>
       <div className="container" style={{overflow:"hidden"}}>
-        <div className="row">
+        <div className="row" style={{marginTop:"150px"}}>
           <div className="col-sm-2 col-xs-12" style={{float: "left"}}>
             <div className="card">
               <div className="card-block">
@@ -25,16 +27,18 @@ class About extends React.Component {
           <div className="col-sm-10" style={{float: "right"}}>
             <div className="card" style={{textAlign: "center", verticalAlign: "middle"}}>
               <div className="card-block hidden-xs" style={cardBlockStyle}>
-                <p className="card-text" style={{fontFamily:"ubuntu",fontSize: "18px", color: "white", textShadow: "3px 3px 0px #000", fontWeight:"700"}}>I am passionate, a quick learner, and a self-starter looking to leverage my technical and leadership skills on an agile development team.
+                <p className="card-text" style={{fontFamily:"ubuntu",fontSize: "18px", color: "white", fontWeight:"700"}}>I am passionate, a quick learner, and a self-starter looking to leverage my technical and leadership skills on an agile development team.
                                         Skilled in full stack JS, HTML/CSS, SQL. Experienced in working on a scrum team, developing business plans, functional testing & requirements gathering.
                                         Interested in a challenging technical career in a development environment with learning opportunities.</p><br/>
-                                      <p style={{fontFamily:"ubuntu",fontWeight: "bold", fontSize: "27px", color: "white", textShadow: "3px 3px 0px #000"}}>Looking for Front End Engineering / Web Development opportunities </p>
+                                      <p style={{fontFamily:"ubuntu",fontWeight: "bold", fontSize: "27px", color: "white"}}>Looking for Front End Engineering / Web Development opportunities </p>
               </div>
             </div>
           </div>
         </div>
         <br />
       </div>
+    </div>
+  </div>
     );
   }
 }

@@ -1,56 +1,77 @@
+'use strict';
+
 import React from 'react';
+import {DropdownButton, MenuItem} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
+import './assets/styles/global.css';
 
 class Header extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props)
     this.state= {
-    };
+      scrollClass: 'navbar opaque-navbar navbar-fixed-top hidden-xs',
+    }
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+  componentDidMount() {
+       window.addEventListener('scroll', this.handleScroll);
+    }
+    componentWillUnmount(){
+      window.removeEventListener('scroll', this.handleScroll);
+    }
+  handleScroll(e){
+    var pageY = window.scrollY;
+    console.log(pageY)
+    if (pageY > 100 && pageY < 1000){
+      this.setState({scrollClass: 'navbar opaque-navbar opaque navbar-fixed-top hidden-xs'});
+    }
+    else if(pageY >= 1000){
+      this.setState({scrollClass: 'navbar opaque-navbar torquoise navbar-fixed-top hidden-xs'});
+    }
+    else{
+      console.log("at top");
+      this.setState({scrollClass: 'navbar opaque-navbar navbar-fixed-top hidden-xs'});
+    }
   }
   render(){
-      var headerStyle = {color: "#333", fontVariant: "small-caps"}
+    let {scrollClass} = this.state;
     return(
-        <div>
-          <div className="visible-xs">
-            <img className="visble-xs" data-src="holder.js/auto" src='../extra/bw_logo.png' style={{width:"110px", height:"83px",  backgroundRepeat:"no-repeat"}}>
-            </img>
-          </div>
-          <nav className="navbar navbar-default hidden-xs" style={{height: "60px", borderRadius: "50px", borderWidth: "2px", margin:"0px auto"}}>
-            <div className="nav navbar-nav navbar-left">
-              <ul className="nav navbar-nav navbar-left" style={{paddingTop: "2px"}}>
-                <li>
-                  <a className="nav navbar-nav navbar-left" style={{backgroundImage:"url(../extra/bw_logo2.png)",width:"100%", height:"100%", marginLeft:"30px", backgroundRepeat:"no-repeat"}}>
+
+          <nav className={scrollClass} id='nav'>
+
+                <a className="navbar-brand">
+                    <img className="d-inline-block align-top visible-md visible-lg visible-xl visible-sm visible-xs"src="../extra/bw_logo.png" style={{width:"100px", height:"80px"}}>
+                    </img>
                   </a>
-                </li>
-              </ul>
-          </div>
-            <div className="container" style={{marginLeft:"100px"}}>
-              <div className="navbar-header" style={{paddingTop: "5px"}}>
-                <a className="navbar-brand hidden-xs" href="#" style={headerStyle}>Brendon White</a>
-              </div>
-              <div className="navbar-collapse collapse" id="navbar">
-                <ul className="nav navbar-nav" style={{paddingTop: "5px" }}>
-                  <li >
-                    <a href="#ProjectOne" style={headerStyle}>Project 1</a>
-                  </li>
-                  <li>
-                    <a href="#ProjectTwo" style={headerStyle}>Project 2</a>
-                  </li>
-                </ul>
-                <ul className="nav navbar-nav navbar-right hidden-xs" style={{paddingTop: "5px", marginRight:"80px"}}>
-                  <li>
-                    <a  href="https://www.github.com/whiteb38" target="_blank" style={{backgroundImage:"url(../extra/Webp.net-resizeimage.png)", width:"90px", height:"20px", backgroundRepeat: "no-repeat", marginTop:"6px", marginRight:"20px"}}>
-                    </a>
-                  </li>
-                  <li>
-                    <a  href="https://www.linkedin.com/in/brendon-white-55896b58/" target="_blank" style={{backgroundImage:"url(../extra/Logo-2C-21px-TM.png)", width:"100px", height:"20px", backgroundRepeat: "no-repeat", marginTop:"14px"}}>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+                  <div className="collapse navbar-collapse " >
+                    <ul className="navbar-nav hidden-sm hidden-xs">
+                      <li className="navbar-item" style={{paddingLeft:"20px"}}><a href="#">Experience</a></li>
+                      <li className="navbar-item"><a href="#">Projects</a></li>
+                      <li className="navbar-item"><a href="#">Frameworks</a></li>
+                      <li className="navbar-item">
+                        <a  href="https://www.github.com/whiteb38" target="_blank">
+                          <img src="../extra/Webp.net-resizeimage.png" style={{width:"100px", height:"40px", marginTop:"-10px"}} />
+                        </a>
+                      </li>
+                      <li className="navbar-item">
+                        <a  href="https://www.linkedin.com/in/brendon-white-55896b58/" target="_blank">
+                          <img src="../extra/Logo-2C-21px-TM.png" style={{width:"100px", height:"20px", marginTop:"-5px"}} />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="visible-xs visible-sm hidden-md hidden-lg hidden-xl" style={{marginLeft:"150px", marginTop:"-20px"}}>
+                    <DropdownButton  title="Menu" id="Menu" style={{height:"50px", backgroundColor: "white"}}>
+                      <MenuItem id="menuItem" href="/Experience">Experience</MenuItem>
+                      <MenuItem id="menuItem" href="/Projects">Projects</MenuItem>
+                      <MenuItem id="menuItem" href="/Frameworks">Frameworks</MenuItem>
+                      <MenuItem divider />
+                      <MenuItem id="menuItem" href="https://www.github.com/whiteb38">Github</MenuItem>
+                      <MenuItem id="menuItem" href="https://www.linkedin.com/in/brendon-white-55896b58/">LinkedIn</MenuItem>
+                    </DropdownButton>
+                  </div>
+
           </nav>
-        </div>
     );
   }
 }
