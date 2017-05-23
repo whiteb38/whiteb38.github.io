@@ -44,7 +44,7 @@ class Header extends React.Component {
                     </img>
                   </a>
                   <div className="collapse navbar-collapse " >
-                    <ul className="navbar-nav hidden-sm hidden-xs">
+                    <ul className="navbar-nav hidden-xs">
                       <li className="navbar-item" style={{paddingLeft:"20px"}}><a href="#">Experience</a></li>
                       <li className="navbar-item"><a href="#">Projects</a></li>
                       <li className="navbar-item"><a href="#">Frameworks</a></li>
@@ -60,7 +60,7 @@ class Header extends React.Component {
                       </li>
                     </ul>
                   </div>
-                  <div className="visible-xs visible-sm hidden-md hidden-lg hidden-xl" style={{marginLeft:"150px", marginTop:"-20px"}}>
+                  <div className="visible-xs hidden-sm hidden-md hidden-lg hidden-xl" style={{marginLeft:"150px", marginTop:"-20px"}}>
                     <DropdownButton  title="Menu" id="Menu" style={{height:"50px", backgroundColor: "white"}}>
                       <MenuItem id="menuItem" href="/Experience">Experience</MenuItem>
                       <MenuItem id="menuItem" href="/Projects">Projects</MenuItem>
