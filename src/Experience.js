@@ -8,61 +8,87 @@ class Experience extends React.Component {
     };
   }
   render(){
-    var cardStyle={ borderRadius:"15px", position: "relative", display:"flex", flexDirection:"column", backgroundColor: "white", border:"1px solid", padding: "0px"};
+    var cardStyle={ borderBottomRightRadius:"30px", margin:"auto",width:"400px", height:"520px", backgroundColor: "white", border:"1px solid"};
     var cardBlockStyle={padding:"15px"};
     return(
 <div>
 <div className="row">
-  <div className="col-sm-6">
+  <div className="col-sm-6" style={{paddingRight:"0px", paddingLeft:"70px"}}>
     <div className="card"  style={cardStyle}>
-      <div className="card-block" style={cardBlockStyle}>
-        <h4 className="card-title">Experience</h4>
-        <ul>
-          <li className="card-text">Built admin web app to manage foreign language table from client – C#, ReactJS, SQL</li>
-          <li className="card-text">Developed ‘banner tool’ for platform wide announcements – C#, ReactJS, SQL, HTML, CSS</li>
-          <li className="card-text">Built portal using MEAN stack - MongoDB, Express.JS, Angular.JS, Node.JS</li>
-          <li className="card-text">Daily: Building RESTful API’s, defect/bug fixer for admin tools & continually adding functionality based on end user requests</li>
-        </ul>
+      <div style={{backgroundColor: "#004D51", minHeight:"100px"}}>
+        <h4 style={{fontSize:"40px", color: "white",textAlign:"center", verticalAlign:"middle", lineHeight:"100px", margin:"auto"}}>Skills</h4>
+      </div>
+      <div className="container" style={cardBlockStyle}>
+          <p className="card-text" style={{fontSize:"25px"}}><strong>Programming Languages</strong>:</p>
+          <p className="card-text" style={{fontSize:"15px"}}>JavaScript, SQL, C#, Python</p>
+          <p className="card-text" style={{fontSize:"25px"}}><strong>Frameworks & Libraries</strong>:</p>
+          <p className="card-text" style={{fontSize:"15px"}}> ReactJS, jQuery, Node.js, AngularJS </p>
+          <p className="card-text" style={{fontSize:"25px"}}><strong>Database</strong>:</p>
+          <p className="card-text" style={{fontSize:"15px"}}>MySQL</p>
+          <p className="card-text" style={{fontSize:"25px"}}><strong>Software</strong>:</p>
+          <p className="card-text" style={{fontSize:"15px"}}>Microsoft SQL Server, Visual Studio.Net, <br/>Atom, Postman, SOAPUI</p>
+          <p className="card-text" style={{fontSize:"25px"}}><strong>Version Control</strong>:</p>
+          <p className="card-text" style={{fontSize:"15px"}}>Github</p>
       </div>
     </div>
   </div>
-  <div className="col-sm-6" >
+  <div className="col-sm-6" style={{paddingLeft:"-40px", paddingRight:"70px"}}>
     <div className="card" style={cardStyle}>
-      <div className="card-block" style={cardBlockStyle}>
-        <h4 className="card-title">Skills</h4>
-          <p className="card-text"><strong>Programming Languages</strong>: Currently use JavaScript, SQL, C#. Previously Python</p>
-          <p className="card-text"><strong>Database</strong>:  MySQL</p>
-          <p className="card-text"><strong>Frameworks & Libraries</strong>: ReactJS, jQuery, Node.js, AngularJS </p>
-          <p className="card-text"><strong>Software</strong>: Microsoft SQL Server, Visual Studio.Net, Atom, Postman, SOAPUI</p>
-          <p className="card-text"><strong>Version Control</strong>: Github</p>
+      <div style={{backgroundColor: "#00696E", minHeight:"100px"}}>
+        <h4 style={{fontSize:"40px", color: "white",textAlign:"center", verticalAlign:"middle", lineHeight:"100px", margin:"auto"}}>Experience</h4>
+      </div>
+      <div className="container" style={cardBlockStyle}>
+          <p className="card-text" style={{fontSize:"25px"}}><strong>Programming Languages</strong>:</p>
+          <p className="card-text" style={{fontSize:"15px"}}>JavaScript, SQL, C#, Python</p>
+          <p className="card-text" style={{fontSize:"25px"}}><strong>Frameworks & Libraries</strong>:</p>
+          <p className="card-text" style={{fontSize:"15px"}}> ReactJS, jQuery, Node.js, AngularJS </p>
+          <p className="card-text" style={{fontSize:"25px"}}><strong>Database</strong>:</p>
+          <p className="card-text" style={{fontSize:"15px"}}>MySQL</p>
+          <p className="card-text" style={{fontSize:"25px"}}><strong>Software</strong>:</p>
+          <p className="card-text" style={{fontSize:"15px"}}>Microsoft SQL Server, Visual Studio.Net, <br/>Atom, Postman, SOAPUI</p>
+          <p className="card-text" style={{fontSize:"25px"}}><strong>Version Control</strong>:</p>
+          <p className="card-text" style={{fontSize:"15px"}}>Github</p>
       </div>
     </div>
   </div>
 </div>
 <br/>
 <div className="row">
-  <div className="col-sm-6">
+  <div className="col-sm-6" style={{paddingRight:"0px", paddingLeft:"70px"}}>
     <div className="card"  style={cardStyle}>
-      <div className="card-block" style={cardBlockStyle}>
-        <h4 className="card-title">Experience</h4>
-        <ul>
-          <li className="card-text">Built admin web app to manage foreign language table from client – C#, ReactJS, SQL</li>
-          <li className="card-text">Developed ‘banner tool’ for platform wide announcements – C#, ReactJS, SQL, HTML, CSS</li>
-          <li className="card-text">Built portal using MEAN stack - MongoDB, Express.JS, Angular.JS, Node.JS</li>
-          <li className="card-text">Daily: Building RESTful API’s, defect/bug fixer for admin tools & continually adding functionality based on end user requests</li>
-        </ul>
+      <div style={{backgroundColor: "#3498ab", minHeight:"100px"}}>
+        <h4 style={{fontSize:"40px", color: "white",textAlign:"center", verticalAlign:"middle", lineHeight:"100px", margin:"auto"}}>Experience</h4>
+      </div>
+      <div className="container" style={cardBlockStyle}>
+          <p className="card-text" style={{fontSize:"25px"}}><strong>Programming Languages</strong>:</p>
+          <p className="card-text" style={{fontSize:"15px"}}>JavaScript, SQL, C#, Python</p>
+          <p className="card-text" style={{fontSize:"25px"}}><strong>Frameworks & Libraries</strong>:</p>
+          <p className="card-text" style={{fontSize:"15px"}}> ReactJS, jQuery, Node.js, AngularJS </p>
+          <p className="card-text" style={{fontSize:"25px"}}><strong>Database</strong>:</p>
+          <p className="card-text" style={{fontSize:"15px"}}>MySQL</p>
+          <p className="card-text" style={{fontSize:"25px"}}><strong>Software</strong>:</p>
+          <p className="card-text" style={{fontSize:"15px"}}>Microsoft SQL Server, Visual Studio.Net, <br/>Atom, Postman, SOAPUI</p>
+          <p className="card-text" style={{fontSize:"25px"}}><strong>Version Control</strong>:</p>
+          <p className="card-text" style={{fontSize:"15px"}}>Github</p>
       </div>
     </div>
   </div>
-  <div className="col-sm-6" >
+  <div className="col-sm-6" style={{paddingLeft:"-40px", paddingRight:"70px"}}>
     <div className="card" style={cardStyle}>
-      <div className="card-block" style={cardBlockStyle}>
-        <h4 className="card-title">Skills</h4>
-          <p className="card-text"><strong>Programming Languages</strong>: Currently use JavaScript, SQL, C#. Previously Python</p>
-          <p className="card-text"><strong>Database</strong>:  MySQL</p>
-          <p className="card-text"><strong>Frameworks & Libraries</strong>: ReactJS, jQuery, Node.js, AngularJS </p>
-          <p className="card-text"><strong>Software</strong>: Microsoft SQL Server, Visual Studio.Net, Atom, Postman, SOAPUI</p>
-          <p className="card-text"><strong>Version Control</strong>: Github</p>
+      <div style={{backgroundColor: "#00B0B8", minHeight:"100px"}}>
+        <h4 style={{fontSize:"40px", color: "white",textAlign:"center", verticalAlign:"middle", lineHeight:"100px", margin:"auto"}}>Experience</h4>
+      </div>
+      <div className="container" style={cardBlockStyle}>
+          <p className="card-text" style={{fontSize:"25px"}}><strong>Programming Languages</strong>:</p>
+          <p className="card-text" style={{fontSize:"15px"}}>JavaScript, SQL, C#, Python</p>
+          <p className="card-text" style={{fontSize:"25px"}}><strong>Frameworks & Libraries</strong>:</p>
+          <p className="card-text" style={{fontSize:"15px"}}> ReactJS, jQuery, Node.js, AngularJS </p>
+          <p className="card-text" style={{fontSize:"25px"}}><strong>Database</strong>:</p>
+          <p className="card-text" style={{fontSize:"15px"}}>MySQL</p>
+          <p className="card-text" style={{fontSize:"25px"}}><strong>Software</strong>:</p>
+          <p className="card-text" style={{fontSize:"15px"}}>Microsoft SQL Server, Visual Studio.Net, <br/>Atom, Postman, SOAPUI</p>
+          <p className="card-text" style={{fontSize:"25px"}}><strong>Version Control</strong>:</p>
+          <p className="card-text" style={{fontSize:"15px"}}>Github</p>
       </div>
     </div>
   </div>

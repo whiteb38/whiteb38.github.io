@@ -32,7 +32,7 @@ class Chart extends React.Component {
           {x: 5, y: 4, label: "C#"},
         ]}
         style={{
-          data:{fill:"tomato", strokeWidth: "10px"}, parent: {height:"300px", width:"450px"} }}
+          data:{fill:"#27ae60", strokeWidth: "10px"}, parent: {height:"300px", width:"450px"} }}
         labelComponent={
           <VictoryLabel angle={90} verticalAnchor="middle" textAnchor="end"/>
         }
