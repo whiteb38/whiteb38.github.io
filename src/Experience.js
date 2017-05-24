@@ -8,7 +8,7 @@ class Experience extends React.Component {
     };
   }
   render(){
-    var cardStyle={ borderBottomRightRadius:"30px", margin:"auto",width:"400px", height:"520px", backgroundColor: "white", border:"1px solid"};
+    var cardStyle={ borderBottomRightRadius:"30px", margin:"auto",width:"400px", height:"520px", backgroundColor: "white"};
     var cardBlockStyle={padding:"15px"};
     return(
 <div>
