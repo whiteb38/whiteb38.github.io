@@ -19,7 +19,7 @@ class Chart extends React.Component {
             <span style={{color: "#565656"}}> Static data</span>
           </h2>
           <p className="lead">
-            Responsive web app built with AngularJS, Express, Node.js. Scales based on data. To be used by multiple sales teams accross global company as customer facing employee portal.
+            Using VictoryJS, I built a sample bar chart. I was interested in using VictoryJS as a substitute for D3. It allows for a simple approach to displaying data.
           </p>
         </div>
       <div className="col-md-5">

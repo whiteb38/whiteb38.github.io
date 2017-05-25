@@ -35,19 +35,15 @@ class Experience extends React.Component {
   <div className="col-sm-6" style={{paddingLeft:"-40px", paddingRight:"70px"}}>
     <div className="card" style={cardStyle}>
       <div style={{backgroundColor: "#00696E", minHeight:"100px"}}>
-        <h4 style={{fontSize:"40px", color: "white",textAlign:"center", verticalAlign:"middle", lineHeight:"100px", margin:"auto"}}>Experience</h4>
+        <h4 style={{fontSize:"35px", color: "white",textAlign:"center", verticalAlign:"middle", lineHeight:"100px", margin:"auto"}}>Software Engineer</h4>
       </div>
       <div className="container" style={cardBlockStyle}>
-          <p className="card-text" style={{fontSize:"25px"}}><strong>Programming Languages</strong>:</p>
-          <p className="card-text" style={{fontSize:"15px"}}>JavaScript, SQL, C#, Python</p>
-          <p className="card-text" style={{fontSize:"25px"}}><strong>Frameworks & Libraries</strong>:</p>
-          <p className="card-text" style={{fontSize:"15px"}}> ReactJS, jQuery, Node.js, AngularJS </p>
-          <p className="card-text" style={{fontSize:"25px"}}><strong>Database</strong>:</p>
-          <p className="card-text" style={{fontSize:"15px"}}>MySQL</p>
-          <p className="card-text" style={{fontSize:"25px"}}><strong>Software</strong>:</p>
-          <p className="card-text" style={{fontSize:"15px"}}>Microsoft SQL Server, Visual Studio.Net, <br/>Atom, Postman, SOAPUI</p>
-          <p className="card-text" style={{fontSize:"25px"}}><strong>Version Control</strong>:</p>
-          <p className="card-text" style={{fontSize:"15px"}}>Github</p>
+          <p className="card-text" style={{fontSize:"25px"}}><strong>GE Energy Connections</strong><p style={{fontSize:"18px"}}>(Current)</p></p>
+          <p className="card-text" style={{fontSize:"15px"}}>Built admin web app to manage foreign language <br/> table from client</p>
+          <p className="card-text" style={{fontSize:"15px"}}>Developed ‘banner tool’ for platform wide <br/> announcements</p>
+          <p className="card-text" style={{fontSize:"15px"}}>Built portal using MEAN stack<br/> - MongoDB, Express.JS, Angular.JS, Node.JS</p>
+          <p className="card-text" style={{fontSize:"15px"}}>Wrote scripts, stored procedures,<br/> and functions in MySQL</p>
+          <p className="card-text" style={{fontSize:"15px"}}>Daily: Building RESTful API’s,<br/> defect/bug fixer for admin tools & continually adding<br/> functionality based on end user requests</p>
       </div>
     </div>
   </div>
@@ -57,38 +53,29 @@ class Experience extends React.Component {
   <div className="col-sm-6" style={{paddingRight:"0px", paddingLeft:"70px"}}>
     <div className="card"  style={cardStyle}>
       <div style={{backgroundColor: "#3498ab", minHeight:"100px"}}>
-        <h4 style={{fontSize:"40px", color: "white",textAlign:"center", verticalAlign:"middle", lineHeight:"100px", margin:"auto"}}>Experience</h4>
+        <h4 style={{fontSize:"35px", color: "white",textAlign:"center", verticalAlign:"middle", lineHeight:"100px", margin:"auto"}}>Scrum Master</h4>
       </div>
       <div className="container" style={cardBlockStyle}>
-          <p className="card-text" style={{fontSize:"25px"}}><strong>Programming Languages</strong>:</p>
-          <p className="card-text" style={{fontSize:"15px"}}>JavaScript, SQL, C#, Python</p>
-          <p className="card-text" style={{fontSize:"25px"}}><strong>Frameworks & Libraries</strong>:</p>
-          <p className="card-text" style={{fontSize:"15px"}}> ReactJS, jQuery, Node.js, AngularJS </p>
-          <p className="card-text" style={{fontSize:"25px"}}><strong>Database</strong>:</p>
-          <p className="card-text" style={{fontSize:"15px"}}>MySQL</p>
-          <p className="card-text" style={{fontSize:"25px"}}><strong>Software</strong>:</p>
-          <p className="card-text" style={{fontSize:"15px"}}>Microsoft SQL Server, Visual Studio.Net, <br/>Atom, Postman, SOAPUI</p>
-          <p className="card-text" style={{fontSize:"25px"}}><strong>Version Control</strong>:</p>
-          <p className="card-text" style={{fontSize:"15px"}}>Github</p>
+          <p className="card-text" style={{fontSize:"25px"}}><strong>GE Energy Connections</strong><p style={{fontSize:"18px"}}>(July 2016 - February 2017)</p></p>
+          <p className="card-text" style={{fontSize:"15px"}}>Developed middleware connectors in SAP PI:<br/> A&C SAP system to digital commerce platform</p>
+          <p className="card-text" style={{fontSize:"15px"}}>Created mapping and logic connecting BAPIs<br/> and IDOCs to Web Service broker</p>
+          <p className="card-text" style={{fontSize:"15px"}}>Deployed and tested the “one-EC” commercial<br/> tool, empower & led Scrum Team to deliver<br/> order tracking services in empower dev</p>
+          <p className="card-text" style={{fontSize:"15px"}}>Managed an agile team thru 11 sprints to deliver<br/> reusable connectors for 6 services, a month ahead<br/> of schedule</p>
+          <p className="card-text" style={{fontSize:"15px"}}>Led testing using SOAPUI</p>
       </div>
     </div>
   </div>
   <div className="col-sm-6" style={{paddingLeft:"-40px", paddingRight:"70px"}}>
     <div className="card" style={cardStyle}>
       <div style={{backgroundColor: "#00B0B8", minHeight:"100px"}}>
-        <h4 style={{fontSize:"40px", color: "white",textAlign:"center", verticalAlign:"middle", lineHeight:"100px", margin:"auto"}}>Experience</h4>
+        <h4 style={{fontSize:"35px", color: "white",textAlign:"center", verticalAlign:"middle", lineHeight:"100px", margin:"auto"}}>Project Manager</h4>
       </div>
       <div className="container" style={cardBlockStyle}>
-          <p className="card-text" style={{fontSize:"25px"}}><strong>Programming Languages</strong>:</p>
-          <p className="card-text" style={{fontSize:"15px"}}>JavaScript, SQL, C#, Python</p>
-          <p className="card-text" style={{fontSize:"25px"}}><strong>Frameworks & Libraries</strong>:</p>
-          <p className="card-text" style={{fontSize:"15px"}}> ReactJS, jQuery, Node.js, AngularJS </p>
-          <p className="card-text" style={{fontSize:"25px"}}><strong>Database</strong>:</p>
-          <p className="card-text" style={{fontSize:"15px"}}>MySQL</p>
-          <p className="card-text" style={{fontSize:"25px"}}><strong>Software</strong>:</p>
-          <p className="card-text" style={{fontSize:"15px"}}>Microsoft SQL Server, Visual Studio.Net, <br/>Atom, Postman, SOAPUI</p>
-          <p className="card-text" style={{fontSize:"25px"}}><strong>Version Control</strong>:</p>
-          <p className="card-text" style={{fontSize:"15px"}}>Github</p>
+          <p className="card-text" style={{fontSize:"25px"}}><strong>GE Energy Connections</strong><p style={{fontSize:"18px"}}>(July 2015 - June 2016)</p></p>
+          <p className="card-text" style={{fontSize:"15px"}}>Led TeamCenter Product Lifecycle Management<br/> rollout for Shanghai plant: 3 KUTs, BPA, & test cycles</p>
+          <p className="card-text" style={{fontSize:"15px"}}>Coordinated machine upgrade for ~165 users</p>
+          <p className="card-text" style={{fontSize:"15px"}}>Led development and functional testing for<br/> multiple QlikView dashboards displaying supply<br/> chain analytics previously viewed manually on<br/> excel</p>
+          <p className="card-text" style={{fontSize:"15px"}}>Developed IS BI team landing page; “one-stop-shop”<br/> for all QlikView and Business Objects dashboards<br/> using JavaScript, jQuery, HTML, CSS</p>
       </div>
     </div>
   </div>

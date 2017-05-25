@@ -28,7 +28,7 @@ class Projects extends React.Component {
             <br />
           </div>
         </div>
-        <div className="container" style={{padding:"20px",borderRadius:"5px"}}>
+        <div className="container" style={{padding:"30px",borderRadius:"5px"}}>
         <div className="row featurette">
           <div className="col-md-7">
             <h2 className="featurette-heading">
@@ -41,23 +41,6 @@ class Projects extends React.Component {
           </div>
           <div className="col-md-5">
             <img className="featurette-image img-responsive center-block" style={{borderRadius: "15px", maxWidth: "80%"}} src="../extra/placeholder.png" data-holder-rendered="true" />
-          </div>
-        </div>
-        <br />
-        <hr/>
-        <br />
-        <div className="row featurette">
-          <div className="col-md-7 col-md-push-5">
-            <h2 className="featurette-heading">
-              First feature heading.
-              <span className="text-muted" style={{color:"#B50500"}}> Itll blow your mind!</span>
-            </h2>
-            <p className="lead">
-              Project info goes here; Details about the project; Tech stack, libraries, and more is all included; blah blah blah
-            </p>
-          </div>
-          <div className="col-md-5 col-md-pull-7">
-            <img className="featurette-image img-responsive center-block" style={{borderRadius: "15px", maxWidth: "80%"}}src="../extra/placeholder.png" data-holder-rendered="true" />
           </div>
         </div>
       </div>
