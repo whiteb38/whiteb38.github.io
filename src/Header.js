@@ -34,7 +34,11 @@ class Header extends React.Component {
       window.removeEventListener('scroll', this.handleScroll);
     }
     scrollTo(pos){
-      scroll.scrollTo(pos);
+      scroll.scrollTo(pos, {duration: 1500,
+                            delay: 50,
+                            smooth: "easeInOutQuad"
+                          }
+      );
     }
 
   handleScroll(e){
@@ -85,18 +89,18 @@ class Header extends React.Component {
                       <li className="navbar-item" style={{ cursor:"pointer"}}><a onClick={this.handleClickPrac}>Frameworks</a></li>
                       <li className="navbar-item hidden-md hidden-sm hidden-xs">
                         <a  href="https://www.github.com/whiteb38" target="_blank">
-                          <img id="about" src="../extra/Webp.net-resizeimage.png" style={{width:"100px", height:"40px", marginTop:"-10px"}} />
+                          <img id="about" src="../extra/github_icon.png" style={{width:"45px", height:"auto", marginTop:"-13px"}} />
                         </a>
                       </li>
                       <li className="navbar-item hidden-md hidden-sm hidden-xs">
                         <a  href="https://www.linkedin.com/in/brendon-white-55896b58/" target="_blank">
-                          <img id="about" src="../extra/Logo-2C-21px-TM.png" style={{width:"100px", height:"20px", marginTop:"-5px"}} />
+                          <img id="about" src="../extra/linkedIn_icon.png" style={{width:"45px", height:"auto", marginTop:"-13px"}} />
                         </a>
                       </li>
                     </ul>
                   </div>
                   <div className="visible-xs visible-sm visible-md hidden-lg hidden-xl" style={{marginLeft:"770px",marginTop:"-35px"}}>
-                    <DropdownButton  title="Menu" id="Menu" style={{height:"50px", backgroundColor: "white"}}>
+                    <DropdownButton  title="Menu" id="Menu" pullRight={true|false} style={{height:"50px", backgroundColor: "white"}}>
                       <MenuItem id="menuItem" href="https://www.github.com/whiteb38">Github</MenuItem>
                       <MenuItem id="menuItem" href="https://www.linkedin.com/in/brendon-white-55896b58/">LinkedIn</MenuItem>
                     </DropdownButton>

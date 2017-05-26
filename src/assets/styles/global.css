@@ -48,19 +48,19 @@ body {
 }
 
 .opaque-navbar.opaque{
-  background-color: #008489;
+  background-color: #0E9AA7;
    height: 110px;
    transition: background-color .5s ease 0s;
 }
 
 .opaque-navbar.red{
-  background-color: #d1404a;
+  background-color: #EB6361;
    height: 110px;
    transition: background-color .5s ease 0s;
 }
 
 .opaque-navbar.green{
-  background-color: #27ae60;
+  background-color: #4CD4B0;
    height: 110px;
    transition: background-color .5s ease 0s;
 }
@@ -93,4 +93,8 @@ body {
 
 #about:hover{
   box-shadow: 0 8px 16px 0 rgba(0,0,0,.8);
+}
+#text:hover{
+  text-decoration: underline white;
+  cursor: default;
 }

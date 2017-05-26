@@ -16,7 +16,7 @@ class Chart extends React.Component {
         <div className="col-md-7">
           <h2 className="featurette-heading">
             VictoryJS Example
-            <span style={{color: "#565656"}}> Static data</span>
+            <span style={{color: "#4CD4B0"}}> Static data</span>
           </h2>
           <p className="lead">
             Using VictoryJS, I built a sample bar chart. I was interested in using VictoryJS as a substitute for D3. It allows for a simple approach to displaying data.
@@ -32,7 +32,7 @@ class Chart extends React.Component {
           {x: 5, y: 4, label: "C#"},
         ]}
         style={{
-          data:{fill:"#27ae60", strokeWidth: "10px"}, parent: {height:"300px", width:"450px"} }}
+          data:{fill:"#4CD4B0", strokeWidth: "10px"}, parent: {height:"300px", width:"450px"} }}
         labelComponent={
           <VictoryLabel angle={90} verticalAnchor="middle" textAnchor="end"/>
         }

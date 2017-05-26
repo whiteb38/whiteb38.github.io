@@ -13,13 +13,27 @@ class About extends React.Component {
     var cardBlockStyle={padding:"10px"};
     return(
       <div>
-      <div style={{backgroundColor: "#008489", borderBottomRightRadius: "30px", height:"500px", backgroundRepeat: "no-repeat"}}>
+      <div style={{backgroundColor: "#0E9AA7", borderBottomRightRadius: "30px", height:"500px", backgroundRepeat: "no-repeat"}}>
 
-          <div className="col-sm-12 hidden-xs" style={{marginTop:"150px"}}>
+          <div className="col-sm-12" style={{marginTop:"150px"}}>
 
-              <div style={{}}>
+              <div className="hidden-xs" style={{}}>
                 <img id="about" data-src="holder.js/auto" src="../extra/work_pic.jpg" alt="Card image cap" style={{margin: "auto", display:"block",borderBottomRightRadius: "30px", width: "140px"}}/>
               </div>
+              <div id="text" className="hidden-xs" style={{fontSize:"45px", color: "white", textAlign:"center"}}>
+                Brendon White
+              </div>
+              <div className="hidden-xs" style={{fontSize: "20px", color: "white", textAlign:"center"}}>
+                <p>
+                  Front End Engineering / Web Development
+                </p>
+                <p>
+                  Software Engineer at GE Digital<br/>
+                  Indiana University / Michigan State University
+                </p>
+              </div>
+            </div>
+            <div className="col-sm-12 visible-xs" style={{marginTop:"150px"}}>
               <div style={{fontSize:"45px", color: "white", textAlign:"center"}}>
                 Brendon White
               </div>
@@ -32,8 +46,7 @@ class About extends React.Component {
                   Indiana University / Michigan State University
                 </p>
               </div>
-
-    </div>
+            </div>
   </div>
   </div>
     );
