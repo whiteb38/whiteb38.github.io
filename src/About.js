@@ -15,15 +15,15 @@ class About extends React.Component {
       <div>
       <div style={{backgroundColor: "#008489", borderBottomRightRadius: "30px", height:"500px", backgroundRepeat: "no-repeat"}}>
 
-          <div className="col-sm-12 hidden-xs" style={{marginTop:"170px"}}>
-            <div className="card hidden-xs" id="headerDiv">
-              <div style={{textAlign:"left", position:"absolute"}}>
-                <img style={{width:"auto"}}data-src="holder.js/auto" src="../extra/work_pic.jpg" alt="Card image cap" style={{borderBottomRightRadius: "30px", width: "62%"}}/>
+          <div className="col-sm-12 hidden-xs" style={{marginTop:"150px"}}>
+
+              <div style={{}}>
+                <img id="about" data-src="holder.js/auto" src="../extra/work_pic.jpg" alt="Card image cap" style={{margin: "auto", display:"block",borderBottomRightRadius: "30px", width: "140px"}}/>
               </div>
-              <div style={{fontSize:"2.75vw", marginLeft:"225px", color: "white"}}>
+              <div style={{fontSize:"45px", color: "white", textAlign:"center"}}>
                 Brendon White
               </div>
-              <div style={{fontSize: "calc(45px +.75vw)", marginLeft:"250px", color: "white"}}>
+              <div style={{fontSize: "20px", color: "white", textAlign:"center"}}>
                 <p>
                   Front End Engineering / Web Development
                 </p>
@@ -32,7 +32,7 @@ class About extends React.Component {
                   Indiana University / Michigan State University
                 </p>
               </div>
-        </div>
+
     </div>
   </div>
   </div>

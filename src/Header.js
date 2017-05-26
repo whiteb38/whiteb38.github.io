@@ -2,8 +2,18 @@
 
 import React from 'react';
 import {DropdownButton, MenuItem} from 'react-bootstrap';
+import Experience from './Experience';
+import Projects from './Projects';
+import Practice from './Practice';
 import 'bootstrap/dist/css/bootstrap.css';
 import './assets/styles/global.css';
+var Scroll  = require('react-scroll');
+
+var Link       = Scroll.Link;
+var Element    = Scroll.Element;
+var Events     = Scroll.Events;
+var scroll     = Scroll.animateScroll;
+var scrollSpy  = Scroll.scrollSpy;
 
 class Header extends React.Component {
   constructor(props) {
@@ -12,6 +22,10 @@ class Header extends React.Component {
       scrollClass: 'navbar opaque-navbar navbar-fixed-top',
     }
     this.handleScroll = this.handleScroll.bind(this);
+    this.handleClickExp = this.handleClickExp.bind(this);
+    this.handleClickProj = this.handleClickProj.bind(this);
+    this.handleClickPrac = this.handleClickPrac.bind(this);
+    this.handleClickTop = this.handleClickTop.bind(this);
   }
   componentDidMount() {
        window.addEventListener('scroll', this.handleScroll);
@@ -19,6 +33,10 @@ class Header extends React.Component {
     componentWillUnmount(){
       window.removeEventListener('scroll', this.handleScroll);
     }
+    scrollTo(pos){
+      scroll.scrollTo(pos);
+    }
+
   handleScroll(e){
     var pageY = window.scrollY;
     console.log(pageY)
@@ -38,28 +56,41 @@ class Header extends React.Component {
       this.setState({scrollClass: 'navbar opaque-navbar navbar-fixed-top'});
     }
   }
+  handleClickTop(e){
+    this.scrollTo(0);
+  }
+  handleClickExp(e){
+    this.scrollTo(390);
+  }
+  handleClickProj(e){
+    this.scrollTo(1550);
+  }
+  handleClickPrac(e){
+    this.scrollTo(2500);
+  }
   render(){
     let {scrollClass} = this.state;
+    console.log(this.props);
     return(
           <nav className={scrollClass} id='nav'  >
 
                 <a className="navbar-brand" >
-                    <img className="d-inline-block align-top"src="../extra/bw_logo_clip.png" style={{width:"100px", height:"80px"}}>
+                    <img id="about"  onClick={this.handleClickTop} className="d-inline-block align-top"src="../extra/bw_logo_clip.png" style={{width:"102px", height:"90px", cursor:"pointer"}}>
                     </img>
                   </a>
                   <div className="collapse navbar-collapse " >
                     <ul className="navbar-nav hidden-xs">
-                      <li className="navbar-item" style={{paddingLeft:""}}><a href="#">Experience</a></li>
-                      <li className="navbar-item"><a href="#">Projects</a></li>
-                      <li className="navbar-item"><a href="#">Frameworks</a></li>
+                      <li className="navbar-item" style={{ cursor:"pointer"}}><a onClick={this.handleClickExp}>Experience</a></li>
+                      <li className="navbar-item" style={{ cursor:"pointer"}}><a onClick={this.handleClickProj}>Projects</a></li>
+                      <li className="navbar-item" style={{ cursor:"pointer"}}><a onClick={this.handleClickPrac}>Frameworks</a></li>
                       <li className="navbar-item hidden-md hidden-sm hidden-xs">
                         <a  href="https://www.github.com/whiteb38" target="_blank">
-                          <img src="../extra/Webp.net-resizeimage.png" style={{width:"100px", height:"40px", marginTop:"-10px"}} />
+                          <img id="about" src="../extra/Webp.net-resizeimage.png" style={{width:"100px", height:"40px", marginTop:"-10px"}} />
                         </a>
                       </li>
                       <li className="navbar-item hidden-md hidden-sm hidden-xs">
                         <a  href="https://www.linkedin.com/in/brendon-white-55896b58/" target="_blank">
-                          <img src="../extra/Logo-2C-21px-TM.png" style={{width:"100px", height:"20px", marginTop:"-5px"}} />
+                          <img id="about" src="../extra/Logo-2C-21px-TM.png" style={{width:"100px", height:"20px", marginTop:"-5px"}} />
                         </a>
                       </li>
                     </ul>

@@ -1,5 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+import TransitionGroup from 'react-transition-group';
+require('velocity-animate');
+require('velocity-animate/velocity.ui');
 
 class Experience extends React.Component {
   constructor() {
