@@ -78,33 +78,30 @@ class Header extends React.Component {
     return(
           <nav className={scrollClass} id='nav'  >
 
-                <a className="navbar-brand" >
-                    <img id="about"  onClick={this.handleClickTop} className="d-inline-block align-top"src="../extra/bw_logo_clip.png" style={{width:"102px", height:"90px", cursor:"pointer"}}>
-                    </img>
-                  </a>
-                  <div className="collapse navbar-collapse " >
+            <a className="navbar-brand" style={{marginTop:"-55px", marginLeft:"-40px",padding:"0px"}}>
+              <img onClick={this.handleClickTop} className="d-inline-block align-top"src="../extra/bw_logo_white.png" style={{width:"220px", height:"auto", cursor:"pointer"}}>
+              </img>
+            </a>
+            <div className="collapse navbar-collapse " style={{paddingLeft:"100px"}} >
                     <ul className="navbar-nav hidden-xs">
                       <li className="navbar-item" style={{ cursor:"pointer"}}><a onClick={this.handleClickExp}>Experience</a></li>
                       <li className="navbar-item" style={{ cursor:"pointer"}}><a onClick={this.handleClickProj}>Projects</a></li>
                       <li className="navbar-item" style={{ cursor:"pointer"}}><a onClick={this.handleClickPrac}>Frameworks</a></li>
-                      <li className="navbar-item hidden-md hidden-sm hidden-xs">
+                    </ul>
+                    <ul className="navbar-nav hidden-sm" style={{float:"right", paddingRight:"70px"}}>
+                      <li className="navbar-item ">
                         <a  href="https://www.github.com/whiteb38" target="_blank">
                           <img id="about" src="../extra/github_icon.png" style={{width:"45px", height:"auto", marginTop:"-13px"}} />
                         </a>
                       </li>
-                      <li className="navbar-item hidden-md hidden-sm hidden-xs">
+                      <li className="navbar-item ">
                         <a  href="https://www.linkedin.com/in/brendon-white-55896b58/" target="_blank">
                           <img id="about" src="../extra/linkedIn_icon.png" style={{width:"45px", height:"auto", marginTop:"-13px"}} />
                         </a>
                       </li>
                     </ul>
                   </div>
-                  <div className="visible-xs visible-sm visible-md hidden-lg hidden-xl" style={{marginLeft:"770px",marginTop:"-35px"}}>
-                    <DropdownButton  title="Menu" id="Menu" pullRight={true|false} style={{height:"50px", backgroundColor: "white"}}>
-                      <MenuItem id="menuItem" href="https://www.github.com/whiteb38">Github</MenuItem>
-                      <MenuItem id="menuItem" href="https://www.linkedin.com/in/brendon-white-55896b58/">LinkedIn</MenuItem>
-                    </DropdownButton>
-                  </div>
+
 
           </nav>
     );
