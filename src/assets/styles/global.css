@@ -48,7 +48,7 @@ body {
 }
 
 .opaque-navbar.opaque{
-  background-color: #0E9AA7;
+  background-color: #1D628B;
    height: 110px;
    transition: background-color .5s ease 0s;
 }
@@ -71,7 +71,7 @@ body {
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+  
   transition: 0.3s;
   border-bottom-right-radius: 30px;
 }

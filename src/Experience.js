@@ -18,7 +18,7 @@ class Experience extends React.Component {
 <div className="row">
   <div className="col-sm-6" style={{paddingRight:"0px", paddingLeft:"70px"}}>
     <div className="card"  style={cardStyle}>
-      <div style={{backgroundColor: "#09676F", minHeight:"100px"}}>
+      <div style={{backgroundColor: "#185274", minHeight:"100px"}}>
         <h4 style={{fontSize:"40px", color: "white",textAlign:"center", verticalAlign:"middle", lineHeight:"100px", margin:"auto"}}>Skills</h4>
       </div>
       <div className="container" style={cardBlockStyle}>
@@ -37,7 +37,7 @@ class Experience extends React.Component {
   </div>
   <div className="col-sm-6" style={{paddingLeft:"-40px", paddingRight:"70px"}}>
     <div className="card" style={cardStyle}>
-      <div style={{backgroundColor: "#0C828D", minHeight:"100px"}}>
+      <div style={{backgroundColor: "#2376A7", minHeight:"100px"}}>
         <h4 style={{fontSize:"35px", color: "white",textAlign:"center", verticalAlign:"middle", lineHeight:"100px", margin:"auto"}}>Software Engineer</h4>
       </div>
       <div className="container" style={cardBlockStyle}>
@@ -55,7 +55,7 @@ class Experience extends React.Component {
 <div className="row">
   <div className="col-sm-6" style={{paddingRight:"0px", paddingLeft:"70px"}}>
     <div className="card"  style={cardStyle}>
-      <div style={{backgroundColor: "#0FA6B4", minHeight:"100px"}}>
+      <div style={{backgroundColor: "#5C94B6", minHeight:"100px"}}>
         <h4 style={{fontSize:"35px", color: "white",textAlign:"center", verticalAlign:"middle", lineHeight:"100px", margin:"auto"}}>Scrum Master</h4>
       </div>
       <div className="container" style={cardBlockStyle}>
@@ -70,7 +70,7 @@ class Experience extends React.Component {
   </div>
   <div className="col-sm-6" style={{paddingLeft:"-40px", paddingRight:"70px"}}>
     <div className="card" style={cardStyle}>
-      <div style={{backgroundColor: "#14E1F3", minHeight:"100px"}}>
+      <div style={{backgroundColor: "#7CC7F3", minHeight:"100px"}}>
         <h4 style={{fontSize:"35px", color: "white",textAlign:"center", verticalAlign:"middle", lineHeight:"100px", margin:"auto"}}>Project Manager</h4>
       </div>
       <div className="container" style={cardBlockStyle}>

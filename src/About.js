@@ -13,7 +13,7 @@ class About extends React.Component {
     var cardBlockStyle={padding:"10px"};
     return(
       <div>
-      <div style={{backgroundColor: "#0E9AA7", borderBottomRightRadius: "30px", height:"500px", backgroundRepeat: "no-repeat"}}>
+      <div style={{backgroundColor: "#1D628B", borderBottomRightRadius: "30px", height:"500px", backgroundRepeat: "no-repeat"}}>
 
           <div className="col-sm-12" style={{marginTop:"150px"}}>
 

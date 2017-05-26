@@ -12,7 +12,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 class HomeView extends React.Component {
   render(){
     return(
-      <div style={{backgroundColor: '#f4f7f6', maxWidth: "100%", overflowX:"hidden"}} >
+      <div style={{backgroundColor: 'rgb(244, 243, 242)', maxWidth: "100%", overflowX:"hidden"}} >
         <Header/>
         <About />
         <div className="container" style={{padding: "20px"}}>
