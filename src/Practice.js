@@ -2,6 +2,8 @@ import React from 'react';
 import Chart from './Chart';
 import 'bootstrap/dist/css/bootstrap.css';
 import './assets/styles/global.css';
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 class Practice extends React.Component {
   constructor() {
@@ -10,6 +12,7 @@ class Practice extends React.Component {
     };
   }
   render(){
+    AOS.init();
     var cardStyle={ borderRadius:"15px", position: "relative", display:"flex", flexDirection:"column", backgroundColor: "white", border:"1px solid", padding: "0px"};
     var cardBlockStyle={padding:"10px"};
     return(
@@ -37,11 +40,11 @@ class Practice extends React.Component {
 
               </div>
               <div className="col-md-7">
-                <h2 className="featurette-heading">
+                <h2 data-aos="fade-left" className="featurette-heading">
                   React Scroll
                   <span style={{color: "#4CD4B0"}}> Scrollto position</span>
                 </h2>
-                <p className="lead">
+                <p data-aos="fade-left" className="lead">
                   In order to incorporate 'hash style' scrolling in the header links, I used the react-scroll library. It allows the ability to scroll to a position (not supported by react-router) on the page with add-ons like animation. Next steps are to contribute to the library to create scroll to component instead of position.
                 </p>
               </div>

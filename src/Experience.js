@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import TransitionGroup from 'react-transition-group';
 require('velocity-animate');
 require('velocity-animate/velocity.ui');
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 class Experience extends React.Component {
   constructor() {
@@ -11,13 +13,14 @@ class Experience extends React.Component {
     };
   }
   render(){
+    AOS.init();
     var cardStyle={ borderBottomRightRadius:"30px", margin:"auto",width:"400px", height:"520px", backgroundColor: "white"};
     var cardBlockStyle={padding:"15px"};
     return(
 <div>
 <div className="row">
   <div className="col-sm-6" style={{paddingRight:"0px", paddingLeft:"70px"}}>
-    <div className="card"  style={cardStyle}>
+    <div className="card" data-aos="fade-right" style={cardStyle}>
       <div style={{backgroundColor: "#185274", minHeight:"100px"}}>
         <h4 style={{fontSize:"40px", color: "white",textAlign:"center", verticalAlign:"middle", lineHeight:"100px", margin:"auto"}}>Skills</h4>
       </div>
@@ -36,7 +39,7 @@ class Experience extends React.Component {
     </div>
   </div>
   <div className="col-sm-6" style={{paddingLeft:"-40px", paddingRight:"70px"}}>
-    <div className="card" style={cardStyle}>
+    <div className="card" data-aos="fade-left" style={cardStyle}>
       <div style={{backgroundColor: "#2376A7", minHeight:"100px"}}>
         <h4 style={{fontSize:"35px", color: "white",textAlign:"center", verticalAlign:"middle", lineHeight:"100px", margin:"auto"}}>Software Engineer</h4>
       </div>
@@ -54,7 +57,7 @@ class Experience extends React.Component {
 <br/>
 <div className="row">
   <div className="col-sm-6" style={{paddingRight:"0px", paddingLeft:"70px"}}>
-    <div className="card"  style={cardStyle}>
+    <div className="card" data-aos="fade-right" style={cardStyle}>
       <div style={{backgroundColor: "#5C94B6", minHeight:"100px"}}>
         <h4 style={{fontSize:"35px", color: "white",textAlign:"center", verticalAlign:"middle", lineHeight:"100px", margin:"auto"}}>Scrum Master</h4>
       </div>
@@ -69,7 +72,7 @@ class Experience extends React.Component {
     </div>
   </div>
   <div className="col-sm-6" style={{paddingLeft:"-40px", paddingRight:"70px"}}>
-    <div className="card" style={cardStyle}>
+    <div className="card" data-aos="fade-left" style={cardStyle}>
       <div style={{backgroundColor: "#7CC7F3", minHeight:"100px"}}>
         <h4 style={{fontSize:"35px", color: "white",textAlign:"center", verticalAlign:"middle", lineHeight:"100px", margin:"auto"}}>Project Manager</h4>
       </div>

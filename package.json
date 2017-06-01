@@ -20,6 +20,7 @@
   },
   "homepage": "https://whiteb38.github.io/whiteb38.github.io",
   "dependencies": {
+    "aos": "^2.1.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-preset-latest": "^6.24.1",
