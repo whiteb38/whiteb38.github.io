@@ -1,40 +1,27 @@
-@font-face {
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 700;
-  src: url('../fonts/ubuntu-v9-latin-700.eot'); /* IE9 Compat Modes */
-  src: local('ubuntu'), local('Ubuntu'),
-       url('../fonts/ubuntu-v9-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/ubuntu-v9-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/ubuntu-v9-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/ubuntu-v9-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/ubuntu-v9-latin-regular.svg#Ubuntu') format('svg'); /* Legacy iOS */
-}
 body {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
 }
 
 body {
-    overflow-x: hidden !important;
+  overflow-x: hidden !important;
 }
 
 .opaque-navbar {
-    background-color: rgba(0,0,0,0.0);
+  background-color: rgba(0, 0, 0, 0);
   /* Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)  */
-    height: 110px;
-    border-bottom: 0px;
-    transition: background-color 7s ease 0s;
-    border-bottom-right-radius: 30px;
+  height: 110px;
+  border-bottom: 0px;
+  transition: background-color 7s ease 0s;
 }
-.opaque-navbar li a:hover{
-    color:#fff;
+.opaque-navbar li a:hover {
+  color: #fff;
 }
-.opaque-navbar li a{
-    color: #fff;
-    font-size: 30px;
-    font-weight: bold;
-    padding:14px 10px;
-    text-transform: uppercase;
+.opaque-navbar li a {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
 }
 .opaque-navbar ul {
   list-style: none;
@@ -47,54 +34,63 @@ body {
   padding-left: 20px;
 }
 
-.opaque-navbar.opaque{
-  background-color: #1D628B;
-   height: 110px;
-   transition: background-color .5s ease 0s;
+.opaque-navbar.opaque {
+  background-color: #1d628b;
+  height: 110px;
+  transition: background-color 0.5s ease 0s;
 }
 
-.opaque-navbar.red{
-  background-color: #EB6361;
-   height: 110px;
-   transition: background-color .5s ease 0s;
+.opaque-navbar.red {
+  background-color: #eb6361;
+  height: 110px;
+  transition: background-color 0.5s ease 0s;
 }
 
-.opaque-navbar.green{
-  background-color: #4CD4B0;
-   height: 110px;
-   transition: background-color .5s ease 0s;
+.opaque-navbar.green {
+  background-color: #4cd4b0;
+  height: 110px;
+  transition: background-color 0.5s ease 0s;
 }
 
-#menuItem{
-  color: black;
+.customNav {
+  color: white;
   font-size: 14px;
+}
+.customNav:hover {
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .card {
-
   transition: 0.3s;
   border-bottom-right-radius: 30px;
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,1);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 1);
 }
 
 .container {
-    padding: 2px 16px;
+  padding: 2px 16px;
 }
 
-#headerDiv{
+#headerDiv {
   margin: 0 auto;
   width: 60%;
   height: 40%;
   min-width: 300px;
 }
 
-#about:hover{
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,.8);
+#about:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8);
+  -webkit-border-radius: 99em;
 }
-#text:hover{
-  text-decoration: underline white;
-  cursor: default;
+
+.txt {
+  margin-bottom: 5px;
+}
+
+.formWidth {
+  width: 350px;
 }

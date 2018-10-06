@@ -1,5 +1,4 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
 import './assets/styles/global.css';
 
 class Blurb extends React.Component {
@@ -13,7 +12,7 @@ class Blurb extends React.Component {
     var cardBlockStyle={padding:"10px"};
     return(
       <div style={{textAlign: "center", verticalAlign: "middle"}}>
-        <h3 style={{fontSize:"50px", fontWeight:"bold", color:"white", fontFamily:"ubuntu"}}>Practice with Libraries, Frameworks, and Add-ons</h3>
+        <h3 style={{fontSize:"50px", fontWeight:"bold", color:"white"}}>Practice with Libraries, Frameworks, and Add-ons</h3>
       </div>
     );
   }

@@ -1,59 +1,73 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
-import './assets/styles/global.css';
+import React from "react";
 
 class About extends React.Component {
   constructor() {
     super();
-    this.state= {
-    };
+    this.state = {};
   }
-  render(){
-    var cardStyle={ borderRadius:"15px", position: "relative", display:"flex", flexDirection:"column", backgroundColor: "white", border:"1px solid", padding: "0px"};
-    var cardBlockStyle={padding:"10px"};
-    return(
-      <div>
-      <div style={{backgroundColor: "#1D628B", borderBottomRightRadius: "30px", height:"500px", backgroundRepeat: "no-repeat"}}>
-
-          <div className="col-sm-12" style={{marginTop:"150px"}}>
-
-              <div className="hidden-xs" style={{}}>
-                <img id="about" data-src="holder.js/auto" src="../extra/work_pic.jpg" alt="Card image cap" style={{margin: "auto", display:"block",borderBottomRightRadius: "30px", width: "140px"}}/>
-              </div>
-              <div id="text" className="hidden-xs" style={{fontSize:"45px", color: "white", textAlign:"center"}}>
-                Brendon White
-              </div>
-              <div className="hidden-xs" style={{fontSize: "20px", color: "white", textAlign:"center"}}>
-                <p>
-                  Front End Engineering / Web Development
-                </p>
-                <p>
-                  Software Engineer at GE Digital<br/>
-                  Indiana University / Michigan State University
-                </p>
-              </div>
-            </div>
-            <div className="col-sm-12 visible-xs" style={{marginTop:"150px"}}>
-              <div style={{fontSize:"45px", color: "white", textAlign:"center"}}>
-                Brendon White
-              </div>
-              <div style={{fontSize: "20px", color: "white", textAlign:"center"}}>
-                <p>
-                  Front End Engineering / Web Development
-                </p>
-                <p>
-                  Software Engineer at GE Digital<br/>
-                  Indiana University / Michigan State University
-                </p>
-              </div>
-            </div>
-  </div>
-  </div>
+  render() {
+    var cardStyle = {
+      borderRadius: "15px",
+      position: "relative",
+      display: "flex",
+      flexDirection: "column",
+      backgroundColor: "white",
+      border: "1px solid",
+      padding: "0px"
+    };
+    var cardBlockStyle = { padding: "10px" };
+    return (
+      <div
+        style={{
+          backgroundColor: "#1D628B",
+          borderBottomRightRadius: "30px",
+          height: "250px",
+          backgroundRepeat: "no-repeat"
+        }}
+      >
+        <div className="col-sm-12 d-none d-sm-block">
+          <div
+            id="text"
+            style={{ fontSize: "45px", color: "white", textAlign: "center" }}
+          >
+            Brendon White
+          </div>
+          <div
+            style={{ fontSize: "20px", color: "white", textAlign: "center" }}
+          >
+            <p>Front End Engineering / Web Development</p>
+            <p>
+              Software Engineer at GE Digital
+              <br />
+              Indiana University / Michigan State University
+            </p>
+          </div>
+        </div>
+        <div
+          className="d-block d-sm-none col-sm-12"
+          style={{ marginTop: "110px" }}
+        >
+          <div
+            style={{ fontSize: "45px", color: "white", textAlign: "center" }}
+          >
+            Brendon White
+          </div>
+          <div
+            style={{ fontSize: "20px", color: "white", textAlign: "center" }}
+          >
+            <p>Front End Engineering / Web Development</p>
+            <p>
+              Software Engineer at GE Digital
+              <br />
+              Indiana University / Michigan State University
+            </p>
+          </div>
+        </div>
+      </div>
     );
   }
 }
 export default About;
-
 
 // <div className="col-sm-6">
 //   <div className="card" style={cardStyle}>
