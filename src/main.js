@@ -1,12 +1,20 @@
-import 'bootstrap/dist/css/bootstrap.css';
-import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-import HomeView from './HomeView';
+import "bootstrap/dist/css/bootstrap.css";
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import HomeView from "./HomeView";
 
+import { createStore, applyMiddleware } from "redux";
+import { Provider } from "react-redux";
+import thunk from "redux-thunk";
+import lyricsApp from "./reducers";
 
-document.addEventListener('DOMContentLoaded', function(){
+const store = createStore(lyricsApp, applyMiddleware(thunk));
+
+document.addEventListener("DOMContentLoaded", function() {
   ReactDOM.render(
-    <HomeView />,
-    document.getElementById('mount')
+    <Provider store={store}>
+      <HomeView />
+    </Provider>,
+    document.getElementById("mount")
   );
 });

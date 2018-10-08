@@ -3,24 +3,31 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./assets/styles/global.css";
 import "aos/dist/aos.css";
 import AOS from "aos";
+import { connect } from "react-redux";
+import { fetchLyrics } from "./actions";
+import Lyrics from "./LyricsApp/Lyrics";
+import LyricsChart from "./LyricsApp/LyricsChart";
 
 class Projects extends React.Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      lyrics: null
+    };
+    this.searchLyrics = this.searchLyrics.bind(this);
   }
+
+  searchLyrics(e, artist, title) {
+    e.preventDefault();
+    if (artist && title) {
+      artist = artist.replace(/\(/g, "%28").replace(/\)/g, "%29");
+      title = title.replace(/\(/g, "%28").replace(/\)/g, "%29");
+      this.props.fetchLyrics(artist, title);
+    }
+  }
+
   render() {
     AOS.init();
-    var cardStyle = {
-      borderRadius: "15px",
-      position: "relative",
-      display: "flex",
-      flexDirection: "column",
-      backgroundColor: "white",
-      border: "1px solid",
-      padding: "0px"
-    };
-    var cardBlockStyle = { padding: "10px" };
     return (
       <div className="container" style={{ borderRadius: "5px" }}>
         <div style={{ margin: "auto", width: "130px" }}>
@@ -32,28 +39,99 @@ class Projects extends React.Component {
           />
         </div>
         <div className="row featurette">
-          <div className="col-md-7">
-            <h2 data-aos="fade-right" className="featurette-heading">
-              Responsive Web App
-              <span style={{ color: "#EB6361" }}> MEAN stack</span>
-            </h2>
-            <p className="lead" data-aos="fade-right">
-              Responsive web app built with AngularJS, Express, Node.js. Scales
-              based on data. To be used by multiple sales teams accross global
-              company as customer facing employee portal.
-            </p>
+          <LyricsSearch searchLyrics={this.searchLyrics} />
+          <div className="col-md-6">
+            <Lyrics lyrics={this.props.lyrics} />
           </div>
-          <div className="col-md-5" data-aos="fade-left">
-            <img
-              className="featurette-image img-responsive center-block"
-              style={{ borderRadius: "15px", maxWidth: "80%" }}
-              src="../extra/meanLogo.png"
-              data-holder-rendered="true"
-            />
+        </div>
+        <div className="row featurette">
+          <div className="col-md-6" />
+          <div className="col-md-6">
+            <h2 data-aos="fade-right" className="featurette-heading">
+              Lyric Data
+              <span style={{ color: "#EB6361" }}> ChartJS</span>
+            </h2>
+          </div>
+          <div className="col-md-10 offset-md-2">
+            <LyricsChart lyrics={this.props.lyrics} />
           </div>
         </div>
       </div>
     );
   }
 }
-export default Projects;
+
+const mapStateToProps = state => {
+  return {
+    lyrics: state.lyrics
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  { fetchLyrics }
+)(Projects);
+
+class LyricsSearch extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      artist: null,
+      title: null
+    };
+    this.setArtist = this.setArtist.bind(this);
+    this.setTitle = this.setTitle.bind(this);
+  }
+
+  setArtist(e) {
+    let artist = e.target.value;
+    this.setState({ artist });
+  }
+
+  setTitle(e) {
+    let title = e.target.value;
+    this.setState({ title });
+  }
+
+  render() {
+    return (
+      <div className="col-md-6">
+        <h2 data-aos="fade-right" className="featurette-heading">
+          Lyric Search
+          <span style={{ color: "#EB6361" }}> lyrics.ovh API/ Axios</span>
+        </h2>
+        <form>
+          <div className="form-group">
+            <label htmlFor="artist">Artist : </label>
+            <input
+              type="text"
+              className="form-control"
+              id="artist"
+              placeholder="Enter an artist or band name"
+              onChange={this.setArtist}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="title">Title : </label>
+            <input
+              type="text"
+              className="form-control"
+              id="title"
+              placeholder="Enter a song title"
+              onChange={this.setTitle}
+            />
+          </div>
+          <button
+            type="submit"
+            className="btn btn-primary"
+            onClick={e =>
+              this.props.searchLyrics(e, this.state.artist, this.state.title)
+            }
+          >
+            Search
+          </button>
+        </form>
+      </div>
+    );
+  }
+}
