@@ -60,8 +60,8 @@ class LyricsChart extends React.Component {
     }
 
     let noDataMessage;
-    let chartHeight = "40vh";
-    let chartWidth = "80vw";
+    let chartHeight = "320px";
+    let chartWidth = "640px";
     if (!wordCount) {
       chartHeight = "50px";
       chartWidth = "50px";
