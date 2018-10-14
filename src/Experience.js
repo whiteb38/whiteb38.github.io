@@ -1,5 +1,4 @@
 import React from "react";
-import TransitionGroup from "react-transition-group";
 require("velocity-animate");
 require("velocity-animate/velocity.ui");
 import "aos/dist/aos.css";
@@ -24,7 +23,7 @@ class Experience extends React.Component {
       <div>
         <div className="row">
           <div
-            className="col-sm-6"
+            className="col-md-6 col-xs-12"
             style={{ paddingRight: "0px", paddingLeft: "70px" }}
           >
             <div className="card" data-aos="fade-right" style={cardStyle}>
@@ -79,7 +78,7 @@ class Experience extends React.Component {
             </div>
           </div>
           <div
-            className="col-sm-6"
+            className="col-md-6 col-xs-12"
             style={{ paddingLeft: "-40px", paddingRight: "70px" }}
           >
             <div className="card" data-aos="fade-left" style={cardStyle}>
@@ -130,7 +129,7 @@ class Experience extends React.Component {
         <br />
         <div className="row">
           <div
-            className="col-sm-6"
+            className="col-md-6 col-xs-12"
             style={{ paddingRight: "0px", paddingLeft: "70px" }}
           >
             <div className="card" data-aos="fade-right" style={cardStyle}>
@@ -180,7 +179,7 @@ class Experience extends React.Component {
             </div>
           </div>
           <div
-            className="col-sm-6"
+            className="col-md-6 col-xs-12"
             style={{ paddingLeft: "-40px", paddingRight: "70px" }}
           >
             <div className="card" data-aos="fade-left" style={cardStyle}>

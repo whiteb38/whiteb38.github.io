@@ -8,17 +8,17 @@ const compiler = webpack(webpackConfig);
 
 app.use(express.static(__dirname));
 
-app.use(
-  webpackDevMiddleware(compiler, {
-    hot: false,
-    filename: "bundle.js",
-    publicPath: "/",
-    stats: {
-      colors: true
-    },
-    historyApiFallback: true
-  })
-);
+// app.use(
+//   webpackDevMiddleware(compiler, {
+//     hot: false,
+//     filename: "bundle.js",
+//     publicPath: "/",
+//     stats: {
+//       colors: true
+//     },
+//     historyApiFallback: true
+//   })
+// );
 
 const server = app.listen(8080, function() {
   const host = server.address().address;

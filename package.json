@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile": "webpack --progress --watch -d",
-    "start": "webpack-dev-server --progress --inline --watch -d",
+    "compile": "webpack --progress --mode production",
+    "dev": "webpack --watch --progress --mode development --devtool source-map --colors",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

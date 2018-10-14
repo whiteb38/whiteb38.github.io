@@ -1,12 +1,11 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.css";
-import "./assets/styles/global.css";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import { connect } from "react-redux";
 import { fetchLyrics } from "./actions";
 import Lyrics from "./LyricsApp/Lyrics";
 import LyricsChart from "./LyricsApp/LyricsChart";
+import AuthenticatorModal from "./AuthenticatorModal";
 
 class Projects extends React.Component {
   constructor() {
@@ -39,12 +38,18 @@ class Projects extends React.Component {
           />
         </div>
         <div className="row featurette">
-          <LyricsSearch searchLyrics={this.searchLyrics} />
+          <div className="col-md-6">
+            <h2 data-aos="fade-right" className="featurette-heading">
+              Lyric Search
+              <span style={{ color: "#EB6361" }}> lyrics.ovh API/ Axios</span>
+            </h2>
+            <LyricsSearch searchLyrics={this.searchLyrics} />
+          </div>
           <div className="col-md-6">
             <Lyrics lyrics={this.props.lyrics} />
           </div>
         </div>
-        <div className="row featurette">
+        <div className="row featurette" style={{ paddingBottom: "20px" }}>
           <div className="col-md-6" />
           <div className="col-md-6">
             <h2 data-aos="fade-right" className="featurette-heading">
@@ -54,6 +59,15 @@ class Projects extends React.Component {
           </div>
           <div className="col-md-10 offset-md-2">
             <LyricsChart lyrics={this.props.lyrics} />
+          </div>
+        </div>
+        <div className="row featurette" style={{ paddingBottom: "20px" }}>
+          <div className="col-md-6">
+            <h2 data-aos="fade-right" className="featurette-heading">
+              Authenticator App
+              <span style={{ color: "#EB6361" }}> One-time Password</span>
+            </h2>
+            <AuthenticatorModal />
           </div>
         </div>
       </div>
@@ -95,43 +109,37 @@ class LyricsSearch extends React.Component {
 
   render() {
     return (
-      <div className="col-md-6">
-        <h2 data-aos="fade-right" className="featurette-heading">
-          Lyric Search
-          <span style={{ color: "#EB6361" }}> lyrics.ovh API/ Axios</span>
-        </h2>
-        <form>
-          <div className="form-group">
-            <label htmlFor="artist">Artist : </label>
-            <input
-              type="text"
-              className="form-control"
-              id="artist"
-              placeholder="Enter an artist or band name"
-              onChange={this.setArtist}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="title">Title : </label>
-            <input
-              type="text"
-              className="form-control"
-              id="title"
-              placeholder="Enter a song title"
-              onChange={this.setTitle}
-            />
-          </div>
-          <button
-            type="submit"
-            className="btn btn-primary"
-            onClick={e =>
-              this.props.searchLyrics(e, this.state.artist, this.state.title)
-            }
-          >
-            Search
-          </button>
-        </form>
-      </div>
+      <form>
+        <div className="form-group">
+          <label htmlFor="artist">Artist : </label>
+          <input
+            type="text"
+            className="form-control"
+            id="artist"
+            placeholder="Enter an artist or band name"
+            onChange={this.setArtist}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="title">Title : </label>
+          <input
+            type="text"
+            className="form-control"
+            id="title"
+            placeholder="Enter a song title"
+            onChange={this.setTitle}
+          />
+        </div>
+        <button
+          type="submit"
+          className="btn btn-primary"
+          onClick={e =>
+            this.props.searchLyrics(e, this.state.artist, this.state.title)
+          }
+        >
+          Search
+        </button>
+      </form>
     );
   }
 }

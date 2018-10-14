@@ -1,7 +1,5 @@
 import React from "react";
 import Chart from "./Chart";
-import "bootstrap/dist/css/bootstrap.css";
-import "./assets/styles/global.css";
 import "aos/dist/aos.css";
 import AOS from "aos";
 

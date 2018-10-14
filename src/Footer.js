@@ -1,12 +1,6 @@
 "use strict";
 
 import React from "react";
-import { DropdownButton, MenuItem } from "react-bootstrap";
-import Experience from "./Experience";
-import Projects from "./Projects";
-import Practice from "./Practice";
-import "bootstrap/dist/css/bootstrap.css";
-import "./assets/styles/global.css";
 var Scroll = require("react-scroll");
 
 var Link = Scroll.Link;
