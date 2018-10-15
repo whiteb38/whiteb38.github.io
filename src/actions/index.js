@@ -2,6 +2,7 @@ import axios from "axios";
 
 export const FETCH_LYRICS = "FETCH_LYRICS";
 export const UPDATE_AUTH = "UPDATE_AUTH";
+export const ADD_NEW_AUTH = "ADD_NEW_AUTH";
 
 export const fetchLyrics = (artist, title) => dispatch => {
   axios
@@ -25,4 +26,8 @@ export const fetchLyrics = (artist, title) => dispatch => {
 
 export const updateAuth = (app, authCode) => {
   return { type: UPDATE_AUTH, app, authCode };
+};
+
+export const addNewAuth = app => {
+  return { type: ADD_NEW_AUTH, app };
 };
