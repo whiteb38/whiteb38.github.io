@@ -99,7 +99,7 @@ class Experience extends React.Component {
               <div className="container" style={cardBlockStyle}>
                 <p className="card-text" style={{ fontSize: "20px" }}>
                   <strong>GE Energy Connections</strong>
-                  <p style={{ fontSize: "18px" }}>(Current)</p>
+                  <span style={{ fontSize: "18px" }}>(Current)</span>
                 </p>
                 <p className="card-text" style={{ fontSize: "15px" }}>
                   Built admin web app to manage foreign language <br /> table
@@ -150,9 +150,9 @@ class Experience extends React.Component {
               <div className="container" style={cardBlockStyle}>
                 <p className="card-text" style={{ fontSize: "20px" }}>
                   <strong>GE Energy Connections</strong>
-                  <p style={{ fontSize: "18px" }}>
+                  <span style={{ fontSize: "18px" }}>
                     (July 2016 - February 2017)
-                  </p>
+                  </span>
                 </p>
                 <p className="card-text" style={{ fontSize: "15px" }}>
                   Developed middleware connectors in SAP PI:
@@ -200,7 +200,9 @@ class Experience extends React.Component {
               <div className="container" style={cardBlockStyle}>
                 <p className="card-text" style={{ fontSize: "20px" }}>
                   <strong>GE Energy Connections</strong>
-                  <p style={{ fontSize: "18px" }}>(July 2015 - June 2016)</p>
+                  <span style={{ fontSize: "18px" }}>
+                    (July 2015 - June 2016)
+                  </span>
                 </p>
                 <p className="card-text" style={{ fontSize: "15px" }}>
                   Led TeamCenter Product Lifecycle Management

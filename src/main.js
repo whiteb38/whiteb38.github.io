@@ -10,9 +10,9 @@ import HomeView from "./components/HomeView";
 import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
-import lyricsApp from "./reducers";
+import app from "./reducers";
 
-const store = createStore(lyricsApp, applyMiddleware(thunk));
+const store = createStore(app, applyMiddleware(thunk));
 
 document.addEventListener("DOMContentLoaded", function() {
   ReactDOM.render(
