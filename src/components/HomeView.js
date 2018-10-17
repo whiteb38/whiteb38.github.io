@@ -13,21 +13,79 @@ class HomeView extends React.Component {
       <div>
         <div
           style={{
-            backgroundColor: "#f5f5f5",
+            backgroundColor: "#c96567",
             maxWidth: "100%",
             overflowX: "hidden"
           }}
         >
           <Header />
-          <About />
-          <div className="container" style={{ padding: "20px" }}>
-            <Experience />
+          <div className="social">
+            <div>
+              <ul className="social-list">
+                <li className="social-item">
+                  <a
+                    className="social-link"
+                    href="https://www.github.com/whiteb38"
+                    target="_blank"
+                  >
+                    <img
+                      className="social-item-github"
+                      id="github"
+                      src="../extra/GitHub-Mark-Light-32px.png"
+                    />
+                  </a>
+                </li>
+                <li className="social-item">
+                  <a
+                    className="social-link"
+                    href="https://www.linkedin.com/in/brendon-white-55896b58/"
+                    target="_blank"
+                  >
+                    <img id="linkedIn" src="../extra/linkedin-4-24.png" />
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div style={{ paddingTop: "20px", background: "white" }}>
-            <Projects />
-          </div>
-          <Practice />
-          <Contact />
+          <main>
+            <div
+              className="container"
+              style={{ padding: "20px 50px 20px 50px", marginBottom: "200px" }}
+            >
+              <About />
+            </div>
+            <div
+              className="container"
+              style={{
+                padding: "20px",
+                marginTop: "200px",
+                marginBottom: "200px"
+              }}
+            >
+              <Experience />
+            </div>
+            <div
+              className="container"
+              style={{
+                padding: "20px 50px 20px 50px",
+                marginTop: "200px",
+                marginBottom: "200px"
+              }}
+            >
+              <Projects />
+            </div>
+            <div
+              className="container"
+              style={{
+                padding: "20px 50px 20px 50px",
+                marginTop: "200px",
+                marginBottom: "200px"
+              }}
+            >
+              <Practice />
+            </div>
+            <Contact />
+          </main>
         </div>
         <Footer />
       </div>

@@ -21,9 +21,9 @@ class Practice extends React.Component {
     };
     var cardBlockStyle = { padding: "10px" };
     return (
-      <div style={{ padding: "20px" }}>
+      <div>
         <div style={{ margin: "auto", width: "200px" }}>
-          <h1>Frameworks</h1>
+          <h1 style={{ color: "white" }}>Frameworks</h1>
         </div>
         <div style={{ paddingBottom: "30px" }}>
           <hr
@@ -38,11 +38,15 @@ class Practice extends React.Component {
           <div className="row featurette">
             <div className="col-md-5" />
             <div className="col-md-7">
-              <h2 data-aos="fade-left" className="featurette-heading">
+              <h2
+                data-aos="fade-left"
+                data-aos-once="true"
+                className="featurette-heading projects-maintext"
+              >
                 React Scroll
-                <span style={{ color: "#4CD4B0" }}> Scrollto position</span>
+                <span className="projects-subtext"> Scrollto position</span>
               </h2>
-              <p data-aos="fade-left" className="lead">
+              <p data-aos="fade-left" data-aos-once="true" className="lead">
                 In order to incorporate 'hash style' scrolling in the header
                 links, I used the react-scroll library. It allows the ability to
                 scroll to a position (not supported by react-router) on the page

@@ -6,7 +6,6 @@ import AOS from "aos";
 class Chart extends React.Component {
   handleClick(e) {
     console.log("clicked");
-    alert("Why did you click that?");
   }
 
   render() {
@@ -14,17 +13,21 @@ class Chart extends React.Component {
     return (
       <div className="row featurette">
         <div className="col-md-7">
-          <h2 data-aos="fade-right" className="featurette-heading">
+          <h2
+            data-aos="fade-right"
+            data-aos-once="true"
+            className="featurette-heading projects-maintext"
+          >
             VictoryJS Example
-            <span style={{ color: "#4CD4B0" }}> Static data</span>
+            <span className="projects-subtext"> Static data</span>
           </h2>
-          <p className="lead" data-aos="fade-right">
+          <p className="lead" data-aos="fade-right" data-aos-once="true">
             Using VictoryJS, I built a sample bar chart. I was interested in
             using VictoryJS as a substitute for D3. It allows for a simple
             approach to displaying data.
           </p>
         </div>
-        <div className="col-md-5" data-aos="fade-left">
+        <div className="col-md-5" data-aos="fade-left" data-aos-once="true">
           <VictoryBar
             data={[
               { x: 1, y: 10, label: "ReactJS" },
@@ -34,7 +37,7 @@ class Chart extends React.Component {
               { x: 5, y: 4, label: "C#" }
             ]}
             style={{
-              data: { fill: "#4CD4B0", strokeWidth: "10px" },
+              data: { fill: "#FEFFFF", strokeWidth: "10px" },
               parent: { height: "300px", width: "450px" }
             }}
             labelComponent={

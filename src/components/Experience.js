@@ -7,31 +7,81 @@ import AOS from "aos";
 class Experience extends React.Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      cardOne: true,
+      cardTwo: true,
+      cardThree: false,
+      cardFour: false
+    };
+    this.setCardOne = this.setCardOne.bind(this);
+    this.setCardTwo = this.setCardTwo.bind(this);
+    this.setCardThree = this.setCardThree.bind(this);
+    this.setCardFour = this.setCardFour.bind(this);
   }
+
+  setCardOne() {
+    const cardOne = !this.state.cardOne;
+    this.setState({ cardOne });
+  }
+
+  setCardTwo() {
+    const cardTwo = !this.state.cardTwo;
+    this.setState({ cardTwo });
+  }
+
+  setCardThree() {
+    const cardThree = !this.state.cardThree;
+    this.setState({ cardThree });
+  }
+
+  setCardFour() {
+    const cardFour = !this.state.cardFour;
+    this.setState({ cardFour });
+  }
+
   render() {
     AOS.init();
-    var cardStyle = {
-      borderBottomRightRadius: "30px",
+
+    var activeCard = {
       margin: "auto",
       width: "400px",
       height: "520px",
-      backgroundColor: "white"
+      backgroundColor: "#314455"
+    };
+    let smallCard = {
+      margin: "auto",
+      width: "400px",
+      height: "100px",
+      backgroundColor: "#314455"
     };
     var cardBlockStyle = { padding: "15px" };
+
     return (
       <div>
+        <div style={{ margin: "auto", width: "195px" }}>
+          <h1 style={{ color: "white" }}>Experience</h1>
+        </div>
+        <div style={{ paddingBottom: "30px" }}>
+          <hr
+            style={{ width: "300px", marginLeft: "auto", marginRight: "auto" }}
+          />
+        </div>
         <div className="row">
           <div
-            className="col-md-6 col-xs-12"
+            className="col"
             style={{ paddingRight: "0px", paddingLeft: "70px" }}
           >
-            <div className="card" data-aos="fade-right" style={cardStyle}>
-              <div style={{ backgroundColor: "#185274", minHeight: "100px" }}>
+            <div
+              className="card"
+              data-aos="fade-right"
+              data-aos-once="true"
+              style={this.state.cardOne ? activeCard : smallCard}
+            >
+              <div className="card-style" onClick={this.setCardOne}>
                 <h4
                   style={{
-                    fontSize: "40px",
-                    color: "white",
+                    fontSize: "35px",
+                    color: "#DEF2F1",
                     textAlign: "center",
                     verticalAlign: "middle",
                     lineHeight: "100px",
@@ -41,48 +91,85 @@ class Experience extends React.Component {
                   Skills
                 </h4>
               </div>
-              <div className="container" style={cardBlockStyle}>
-                <p className="card-text txt" style={{ fontSize: "20px" }}>
-                  <strong>Programming Languages</strong>:
-                </p>
-                <p className="card-text" style={{ fontSize: "15px" }}>
-                  JavaScript, SQL, C#, Python
-                </p>
-                <p className="card-text  txt" style={{ fontSize: "20px" }}>
-                  <strong>Frameworks & Libraries</strong>:
-                </p>
-                <p className="card-text" style={{ fontSize: "15px" }}>
-                  {" "}
-                  ReactJS, jQuery, Node.js, AngularJS{" "}
-                </p>
-                <p className="card-text  txt" style={{ fontSize: "20px" }}>
-                  <strong>Database</strong>:
-                </p>
-                <p className="card-text" style={{ fontSize: "15px" }}>
-                  MySQL
-                </p>
-                <p className="card-text  txt" style={{ fontSize: "20px" }}>
-                  <strong>Software</strong>:
-                </p>
-                <p className="card-text" style={{ fontSize: "15px" }}>
-                  Microsoft SQL Server, Visual Studio.Net, <br />
-                  Atom, Postman, SOAPUI
-                </p>
-                <p className="card-text txt" style={{ fontSize: "20px" }}>
-                  <strong>Version Control</strong>:
-                </p>
-                <p className="card-text" style={{ fontSize: "15px" }}>
-                  Github
-                </p>
-              </div>
+              {this.state.cardOne ? (
+                <div className="container" style={cardBlockStyle}>
+                  <p
+                    className="card-text white-txt txt"
+                    style={{ fontSize: "20px" }}
+                  >
+                    <strong>Programming Languages</strong>:
+                  </p>
+                  <p
+                    className="card-text white-txt"
+                    style={{ fontSize: "15px" }}
+                  >
+                    JavaScript, SQL, C#, Python
+                  </p>
+                  <p
+                    className="card-text white-txt  txt"
+                    style={{ fontSize: "20px" }}
+                  >
+                    <strong>Frameworks & Libraries</strong>:
+                  </p>
+                  <p
+                    className="card-text white-txt"
+                    style={{ fontSize: "15px" }}
+                  >
+                    {" "}
+                    ReactJS, jQuery, Node.js, AngularJS{" "}
+                  </p>
+                  <p
+                    className="card-text white-txt  txt"
+                    style={{ fontSize: "20px" }}
+                  >
+                    <strong>Database</strong>:
+                  </p>
+                  <p
+                    className="card-text white-txt"
+                    style={{ fontSize: "15px" }}
+                  >
+                    MySQL
+                  </p>
+                  <p
+                    className="card-text white-txt  txt"
+                    style={{ fontSize: "20px" }}
+                  >
+                    <strong>Software</strong>:
+                  </p>
+                  <p
+                    className="card-text white-txt"
+                    style={{ fontSize: "15px" }}
+                  >
+                    Microsoft SQL Server, Visual Studio.Net, <br />
+                    Atom, Postman, SOAPUI
+                  </p>
+                  <p
+                    className="card-text white-txt txt"
+                    style={{ fontSize: "20px" }}
+                  >
+                    <strong>Version Control</strong>:
+                  </p>
+                  <p
+                    className="card-text white-txt"
+                    style={{ fontSize: "15px" }}
+                  >
+                    Github
+                  </p>
+                </div>
+              ) : null}
             </div>
           </div>
           <div
-            className="col-md-6 col-xs-12"
+            className="col"
             style={{ paddingLeft: "-40px", paddingRight: "70px" }}
           >
-            <div className="card" data-aos="fade-left" style={cardStyle}>
-              <div style={{ backgroundColor: "#2376A7", minHeight: "100px" }}>
+            <div
+              className="card"
+              data-aos="fade-left"
+              data-aos-once="true"
+              style={this.state.cardTwo ? activeCard : smallCard}
+            >
+              <div className="card-style" onClick={this.setCardTwo}>
                 <h4
                   style={{
                     fontSize: "35px",
@@ -96,44 +183,70 @@ class Experience extends React.Component {
                   Software Engineer
                 </h4>
               </div>
-              <div className="container" style={cardBlockStyle}>
-                <p className="card-text" style={{ fontSize: "20px" }}>
-                  <strong>GE Energy Connections</strong>
-                  <span style={{ fontSize: "18px" }}>(Current)</span>
-                </p>
-                <p className="card-text" style={{ fontSize: "15px" }}>
-                  Built admin web app to manage foreign language <br /> table
-                  from client
-                </p>
-                <p className="card-text" style={{ fontSize: "15px" }}>
-                  Developed ‘banner tool’ for platform wide <br /> announcements
-                </p>
-                <p className="card-text" style={{ fontSize: "15px" }}>
-                  Built portal using MEAN stack
-                  <br />
-                  MongoDB, Express.JS, Angular.JS, Node.JS
-                </p>
-                <p className="card-text" style={{ fontSize: "15px" }}>
-                  Wrote scripts, stored procedures,
-                  <br /> and functions in MySQL
-                </p>
-                <p className="card-text" style={{ fontSize: "15px" }}>
-                  Daily: Building RESTful API’s,
-                  <br /> defect/bug fixer for admin tools & continually adding
-                  <br /> functionality based on end user requests
-                </p>
-              </div>
+              {this.state.cardTwo ? (
+                <div className="container" style={cardBlockStyle}>
+                  <p
+                    className="card-text white-txt"
+                    style={{ fontSize: "20px" }}
+                  >
+                    <strong>GE Energy Connections</strong>
+                    <span style={{ fontSize: "18px" }}>(Current)</span>
+                  </p>
+                  <p
+                    className="card-text white-txt"
+                    style={{ fontSize: "15px" }}
+                  >
+                    Built admin web app to manage foreign language <br /> table
+                    from client
+                  </p>
+                  <p
+                    className="card-text white-txt"
+                    style={{ fontSize: "15px" }}
+                  >
+                    Developed ‘banner tool’ for platform wide <br />{" "}
+                    announcements
+                  </p>
+                  <p
+                    className="card-text white-txt"
+                    style={{ fontSize: "15px" }}
+                  >
+                    Built portal using MEAN stack
+                    <br />
+                    MongoDB, Express.JS, Angular.JS, Node.JS
+                  </p>
+                  <p
+                    className="card-text white-txt"
+                    style={{ fontSize: "15px" }}
+                  >
+                    Wrote scripts, stored procedures,
+                    <br /> and functions in MySQL
+                  </p>
+                  <p
+                    className="card-text white-txt"
+                    style={{ fontSize: "15px" }}
+                  >
+                    Daily: Building RESTful API’s,
+                    <br /> defect/bug fixer for admin tools & continually adding
+                    <br /> functionality based on end user requests
+                  </p>
+                </div>
+              ) : null}
             </div>
           </div>
         </div>
         <br />
         <div className="row">
           <div
-            className="col-md-6 col-xs-12"
+            className="col"
             style={{ paddingRight: "0px", paddingLeft: "70px" }}
           >
-            <div className="card" data-aos="fade-right" style={cardStyle}>
-              <div style={{ backgroundColor: "#5C94B6", minHeight: "100px" }}>
+            <div
+              className="card"
+              data-aos="fade-right"
+              data-aos-once="true"
+              style={this.state.cardThree ? activeCard : smallCard}
+            >
+              <div className="card-style" onClick={this.setCardThree}>
                 <h4
                   style={{
                     fontSize: "35px",
@@ -147,43 +260,68 @@ class Experience extends React.Component {
                   Scrum Master
                 </h4>
               </div>
-              <div className="container" style={cardBlockStyle}>
-                <p className="card-text" style={{ fontSize: "20px" }}>
-                  <strong>GE Energy Connections</strong>
-                  <span style={{ fontSize: "18px" }}>
-                    (July 2016 - February 2017)
-                  </span>
-                </p>
-                <p className="card-text" style={{ fontSize: "15px" }}>
-                  Developed middleware connectors in SAP PI:
-                  <br /> A&C SAP system to digital commerce platform
-                </p>
-                <p className="card-text" style={{ fontSize: "15px" }}>
-                  Created mapping and logic connecting BAPIs
-                  <br /> and IDOCs to Web Service broker
-                </p>
-                <p className="card-text" style={{ fontSize: "15px" }}>
-                  Deployed and tested the “one-EC” commercial
-                  <br /> tool, empower & led Scrum Team to deliver
-                  <br /> order tracking services in empower dev
-                </p>
-                <p className="card-text" style={{ fontSize: "15px" }}>
-                  Managed an agile team thru 11 sprints to deliver
-                  <br /> reusable connectors for 6 services, a month ahead
-                  <br /> of schedule
-                </p>
-                <p className="card-text" style={{ fontSize: "15px" }}>
-                  Led testing using SOAPUI
-                </p>
-              </div>
+              {this.state.cardThree ? (
+                <div className="container" style={cardBlockStyle}>
+                  <p
+                    className="card-text white-txt"
+                    style={{ fontSize: "20px" }}
+                  >
+                    <strong>GE Energy Connections</strong>
+                    <span style={{ fontSize: "18px" }}>
+                      (July 2016 - February 2017)
+                    </span>
+                  </p>
+                  <p
+                    className="card-text white-txt"
+                    style={{ fontSize: "15px" }}
+                  >
+                    Developed middleware connectors in SAP PI:
+                    <br /> A&C SAP system to digital commerce platform
+                  </p>
+                  <p
+                    className="card-text white-txt"
+                    style={{ fontSize: "15px" }}
+                  >
+                    Created mapping and logic connecting BAPIs
+                    <br /> and IDOCs to Web Service broker
+                  </p>
+                  <p
+                    className="card-text white-txt"
+                    style={{ fontSize: "15px" }}
+                  >
+                    Deployed and tested the “one-EC” commercial
+                    <br /> tool, empower & led Scrum Team to deliver
+                    <br /> order tracking services in empower dev
+                  </p>
+                  <p
+                    className="card-text white-txt"
+                    style={{ fontSize: "15px" }}
+                  >
+                    Managed an agile team thru 11 sprints to deliver
+                    <br /> reusable connectors for 6 services, a month ahead
+                    <br /> of schedule
+                  </p>
+                  <p
+                    className="card-text white-txt"
+                    style={{ fontSize: "15px" }}
+                  >
+                    Led testing using SOAPUI
+                  </p>
+                </div>
+              ) : null}
             </div>
           </div>
           <div
-            className="col-md-6 col-xs-12"
+            className="col"
             style={{ paddingLeft: "-40px", paddingRight: "70px" }}
           >
-            <div className="card" data-aos="fade-left" style={cardStyle}>
-              <div style={{ backgroundColor: "#7CC7F3", minHeight: "100px" }}>
+            <div
+              className="card"
+              data-aos="fade-left"
+              data-aos-once="true"
+              style={this.state.cardFour ? activeCard : smallCard}
+            >
+              <div className="card-style" onClick={this.setCardFour}>
                 <h4
                   style={{
                     fontSize: "35px",
@@ -197,32 +335,50 @@ class Experience extends React.Component {
                   Project Manager
                 </h4>
               </div>
-              <div className="container" style={cardBlockStyle}>
-                <p className="card-text" style={{ fontSize: "20px" }}>
-                  <strong>GE Energy Connections</strong>
-                  <span style={{ fontSize: "18px" }}>
-                    (July 2015 - June 2016)
-                  </span>
-                </p>
-                <p className="card-text" style={{ fontSize: "15px" }}>
-                  Led TeamCenter Product Lifecycle Management
-                  <br /> rollout for Shanghai plant: 3 KUTs, BPA, & test cycles
-                </p>
-                <p className="card-text" style={{ fontSize: "15px" }}>
-                  Coordinated machine upgrade for ~165 users
-                </p>
-                <p className="card-text" style={{ fontSize: "15px" }}>
-                  Led development and functional testing for
-                  <br /> multiple QlikView dashboards displaying supply
-                  <br /> chain analytics previously viewed manually on
-                  <br /> excel
-                </p>
-                <p className="card-text" style={{ fontSize: "15px" }}>
-                  Developed IS BI team landing page; “one-stop-shop”
-                  <br /> for all QlikView and Business Objects dashboards
-                  <br /> using JavaScript, jQuery, HTML, CSS
-                </p>
-              </div>
+              {this.state.cardFour ? (
+                <div className="container" style={cardBlockStyle}>
+                  <p
+                    className="card-text white-txt"
+                    style={{ fontSize: "20px" }}
+                  >
+                    <strong>GE Energy Connections</strong>
+                    <span style={{ fontSize: "18px" }}>
+                      (July 2015 - June 2016)
+                    </span>
+                  </p>
+                  <p
+                    className="card-text white-txt"
+                    style={{ fontSize: "15px" }}
+                  >
+                    Led TeamCenter Product Lifecycle Management
+                    <br /> rollout for Shanghai plant: 3 KUTs, BPA, & test
+                    cycles
+                  </p>
+                  <p
+                    className="card-text white-txt"
+                    style={{ fontSize: "15px" }}
+                  >
+                    Coordinated machine upgrade for ~165 users
+                  </p>
+                  <p
+                    className="card-text white-txt"
+                    style={{ fontSize: "15px" }}
+                  >
+                    Led development and functional testing for
+                    <br /> multiple QlikView dashboards displaying supply
+                    <br /> chain analytics previously viewed manually on
+                    <br /> excel
+                  </p>
+                  <p
+                    className="card-text white-txt"
+                    style={{ fontSize: "15px" }}
+                  >
+                    Developed IS BI team landing page; “one-stop-shop”
+                    <br /> for all QlikView and Business Objects dashboards
+                    <br /> using JavaScript, jQuery, HTML, CSS
+                  </p>
+                </div>
+              ) : null}
             </div>
           </div>
         </div>

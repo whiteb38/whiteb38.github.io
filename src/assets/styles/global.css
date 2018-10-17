@@ -6,6 +6,26 @@ body {
   overflow-x: hidden !important;
 }
 
+#nav {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  counter-reset: item 0;
+  position: relative;
+  z-index: 12;
+}
+
+.header_logo {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
 .opaque-navbar {
   background-color: rgba(0, 0, 0, 0);
   /* Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)  */
@@ -35,7 +55,7 @@ body {
 }
 
 .opaque-navbar.opaque {
-  background-color: #1d628b;
+  background-color: #c96567;
   height: 110px;
   transition: background-color 0.5s ease 0s;
 }
@@ -57,7 +77,7 @@ body {
   font-size: 14px;
 }
 .customNav:hover {
-  color: white;
+  color: #314455;
   cursor: pointer;
   text-decoration: underline;
 }
@@ -69,6 +89,11 @@ body {
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 1);
+}
+.card-style {
+  background-color: #314455;
+  min-height: 100px;
+  cursor: pointer;
 }
 
 .container {
@@ -91,6 +116,71 @@ body {
   margin-bottom: 5px;
 }
 
+.white-txt {
+  color: #feffff;
+}
+
 .formWidth {
   width: 350px;
+}
+
+.projects-maintext {
+  color: white;
+}
+
+.projects-subtext {
+  color: #314455;
+}
+
+.accent-text {
+  color: #314455;
+}
+
+.social {
+  width: 40px;
+  position: fixed;
+  bottom: 0px;
+  left: 40px;
+  color: #314455;
+}
+
+.social-list {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+.social-item {
+  padding: 10px;
+  display: inline-block;
+  text-decoration-skip-ink: auto;
+  color: inherit;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  height: auto;
+}
+
+.social-list::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  background-color: #314455;
+  margin: 0px auto;
+}
+
+.social-item-github {
+  width: 24px;
+}
+
+.color-btns {
+  background-color: #c96567 !important;
+  border-color: #314455 !important;
+  color: #314455 !important;
 }

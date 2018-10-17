@@ -53,26 +53,28 @@ class Header extends React.Component {
     this.scrollTo(0);
   }
   handleClickExp(e) {
-    this.scrollTo(390);
+    this.scrollTo(1260);
   }
   handleClickProj(e) {
-    this.scrollTo(1453.86669921875);
+    this.scrollTo(2260);
   }
   handleClickPrac(e) {
-    this.scrollTo(2500);
+    this.scrollTo(3116);
   }
   render() {
     let { scrollClass } = this.state;
     return (
       <nav className="navbar navbar-expand-lg opaque-navbar opaque" id="nav">
-        <a className="navbar-brand">
-          <img
-            onClick={this.handleClickTop}
-            className="d-inline-block align-top"
-            src="../extra/bw_logo_white.png"
-            style={{ width: "220px", height: "auto", cursor: "pointer" }}
-          />
-        </a>
+        <div className="header_logo">
+          <a className="navbar-brand header_logo_link">
+            <img
+              onClick={this.handleClickTop}
+              className="d-inline-block align-top"
+              src="../extra/bw_logo_white-crop.png"
+              style={{ width: "100px", cursor: "pointer" }}
+            />
+          </a>
+        </div>
         <div className="collapse navbar-collapse">
           <div className="navbar-nav">
             <a

@@ -10,11 +10,11 @@ class Contact extends React.Component {
       <div
         style={{
           padding: "20px",
-          background: "white"
+          background: "#c96567"
         }}
       >
         <div style={{ margin: "auto", width: "130px" }}>
-          <h1>Contact</h1>
+          <h1 style={{ color: "white" }}>Contact</h1>
         </div>
         <div style={{ paddingBottom: "10px" }}>
           <hr
@@ -23,13 +23,14 @@ class Contact extends React.Component {
         </div>
         <div style={{ margin: "auto", width: "225px", paddingBottom: "10px" }}>
           <a
+            className="projects-subtext"
             href="mailto:whiteb38@gmail.com"
             data-rel="external"
-            style={{ color: "black", fontSize: "25px" }}
+            style={{ fontSize: "25px" }}
           >
             whiteb38@gmail.com
           </a>
-          <div style={{ width: "100px", margin: "auto" }}>
+          <div style={{ width: "100px", margin: "auto", paddingTop: "20px" }}>
             <a
               href="https://www.github.com/whiteb38"
               target="_blank"

@@ -76,7 +76,7 @@ class AuthenticatorModal extends React.Component {
       <div>
         <button
           type="button"
-          className="btn btn-primary"
+          className="btn btn-primary color-btns"
           data-toggle="modal"
           data-target="#exampleModal"
         >
@@ -99,7 +99,7 @@ class AuthenticatorModal extends React.Component {
                 </h5>
                 <button
                   type="button"
-                  className="close"
+                  className="close "
                   data-dismiss="modal"
                   aria-label="Close"
                 >

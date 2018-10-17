@@ -6,36 +6,22 @@ class About extends React.Component {
     this.state = {};
   }
   render() {
-    var cardStyle = {
-      borderRadius: "15px",
-      position: "relative",
-      display: "flex",
-      flexDirection: "column",
-      backgroundColor: "white",
-      border: "1px solid",
-      padding: "0px"
-    };
-    var cardBlockStyle = { padding: "10px" };
     return (
       <div
         style={{
-          backgroundColor: "#1D628B",
-          borderBottomRightRadius: "30px",
-          height: "250px",
-          backgroundRepeat: "no-repeat"
+          height: "50vh",
+          backgroundRepeat: "no-repeat",
+          marginTop: "300px"
         }}
       >
         <div className="col-sm-12 d-none d-sm-block">
-          <div
-            id="text"
-            style={{ fontSize: "45px", color: "white", textAlign: "center" }}
-          >
+          <div id="text" style={{ fontSize: "75px", color: "white" }}>
             Brendon White
           </div>
-          <div
-            style={{ fontSize: "20px", color: "white", textAlign: "center" }}
-          >
-            <p>Front End Engineering / Web Development</p>
+          <div style={{ fontSize: "30px", color: "white" }}>
+            <p className="accent-text">
+              Front End Engineering / Web Development
+            </p>
             <p>
               Software Engineer at GE Digital
               <br />
@@ -47,15 +33,11 @@ class About extends React.Component {
           className="d-block d-sm-none col-sm-12"
           style={{ marginTop: "110px" }}
         >
-          <div
-            style={{ fontSize: "45px", color: "white", textAlign: "center" }}
-          >
-            Brendon White
-          </div>
-          <div
-            style={{ fontSize: "20px", color: "white", textAlign: "center" }}
-          >
-            <p>Front End Engineering / Web Development</p>
+          <div style={{ fontSize: "60px", color: "white" }}>Brendon White</div>
+          <div style={{ fontSize: "30px" }}>
+            <p className="accent-text">
+              Front End Engineering / Web Development
+            </p>
             <p>
               Software Engineer at GE Digital
               <br />

@@ -47,7 +47,7 @@ class LyricsSearch extends React.Component {
         </div>
         <button
           type="submit"
-          className="btn btn-primary"
+          className="btn btn-primary color-btns"
           onClick={e =>
             this.props.searchLyrics(e, this.state.artist, this.state.title)
           }

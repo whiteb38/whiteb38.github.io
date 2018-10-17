@@ -30,9 +30,9 @@ class Projects extends React.Component {
   render() {
     AOS.init();
     return (
-      <div className="container" style={{ borderRadius: "5px" }}>
+      <div>
         <div style={{ margin: "auto", width: "130px" }}>
-          <h1>Projects</h1>
+          <h1 style={{ color: "white" }}>Projects</h1>
         </div>
         <div style={{ paddingBottom: "30px" }}>
           <hr
@@ -41,9 +41,13 @@ class Projects extends React.Component {
         </div>
         <div className="row featurette">
           <div className="col-md-6">
-            <h2 data-aos="fade-right" className="featurette-heading">
+            <h2
+              data-aos="fade-right"
+              data-aos-once="true"
+              className="featurette-heading projects-maintext"
+            >
               Lyric Search
-              <span style={{ color: "#EB6361" }}> lyrics.ovh API/ Axios</span>
+              <span className="projects-subtext"> lyrics.ovh API/ Axios</span>
             </h2>
             <LyricsSearch searchLyrics={this.searchLyrics} />
           </div>
@@ -54,9 +58,13 @@ class Projects extends React.Component {
         <div className="row featurette" style={{ paddingBottom: "20px" }}>
           <div className="col-md-6" />
           <div className="col-md-6">
-            <h2 data-aos="fade-right" className="featurette-heading">
+            <h2
+              data-aos="fade-right"
+              data-aos-once="true"
+              className="featurette-heading projects-maintext"
+            >
               Lyric Data
-              <span style={{ color: "#EB6361" }}> ChartJS</span>
+              <span className="projects-subtext"> ChartJS</span>
             </h2>
           </div>
           <div className="col-md-10 offset-md-2">
@@ -65,9 +73,13 @@ class Projects extends React.Component {
         </div>
         <div className="row featurette" style={{ paddingBottom: "20px" }}>
           <div className="col-md-6">
-            <h2 data-aos="fade-right" className="featurette-heading">
+            <h2
+              data-aos="fade-right"
+              data-aos-once="true"
+              className="featurette-heading projects-maintext"
+            >
               Authenticator App
-              <span style={{ color: "#EB6361" }}> Software Token</span>
+              <span className="projects-subtext"> Software Token</span>
             </h2>
             <AuthenticatorModal />
           </div>
@@ -75,9 +87,13 @@ class Projects extends React.Component {
         <div className="row featurette" style={{ paddingBottom: "20px" }}>
           <div className="col-md-6" />
           <div className="col-md-6">
-            <h2 data-aos="fade-right" className="featurette-heading">
+            <h2
+              data-aos="fade-right"
+              data-aos-once="true"
+              className="featurette-heading projects-maintext"
+            >
               Job Board App
-              <span style={{ color: "#EB6361" }}> Example</span>
+              <span className="projects-subtext"> Example</span>
             </h2>
             <JobBoardModal />
           </div>
