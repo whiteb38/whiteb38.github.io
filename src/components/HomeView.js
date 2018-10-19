@@ -8,6 +8,38 @@ import Footer from "./Footer";
 import Contact from "./Contact";
 
 class HomeView extends React.Component {
+  constructor(props) {
+    super(props);
+    this.experienceRef = React.createRef();
+    this.projectsRef = React.createRef();
+    this.frameWorksRef = React.createRef();
+    this.scrollToExperience = this.scrollToExperience.bind(this);
+    this.scrollToProjects = this.scrollToProjects.bind(this);
+    this.scrollToFrameworks = this.scrollToFrameworks.bind(this);
+  }
+
+  scrollToExperience() {
+    this.experienceRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+    });
+  }
+  scrollToProjects() {
+    this.projectsRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+    });
+  }
+  scrollToFrameworks() {
+    this.frameWorksRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+    });
+  }
+
   render() {
     return (
       <div>
@@ -18,7 +50,11 @@ class HomeView extends React.Component {
             overflowX: "hidden"
           }}
         >
-          <Header />
+          <Header
+            scrollToExperience={this.scrollToExperience}
+            scrollToProjects={this.scrollToProjects}
+            scrollToFrameworks={this.scrollToFrameworks}
+          />
           <div className="social">
             <div>
               <ul className="social-list">
@@ -33,18 +69,33 @@ class HomeView extends React.Component {
                       id="github"
                       src="../extra/GitHub-Mark-Light-32px.png"
                     />
+                    <div className="overlay" />
                   </a>
                 </li>
-                <li className="social-item">
+                <li className="social-item" style={{ marginBottom: "20px" }}>
                   <a
                     className="social-link"
                     href="https://www.linkedin.com/in/brendon-white-55896b58/"
                     target="_blank"
                   >
                     <img id="linkedIn" src="../extra/linkedin-4-24.png" />
+                    <div className="overlay" />
                   </a>
                 </li>
               </ul>
+            </div>
+          </div>
+          <div className="email">
+            <div>
+              <div className="emailLinkWrapper">
+                <a
+                  className="emailLink"
+                  href="mailto:whiteb38@gmail.com"
+                  target="_blank"
+                >
+                  whiteb38@gmail.com
+                </a>
+              </div>
             </div>
           </div>
           <main>
@@ -62,7 +113,7 @@ class HomeView extends React.Component {
                 marginBottom: "200px"
               }}
             >
-              <Experience />
+              <Experience experienceRef={this.experienceRef} />
             </div>
             <div
               className="container"
@@ -72,7 +123,7 @@ class HomeView extends React.Component {
                 marginBottom: "200px"
               }}
             >
-              <Projects />
+              <Projects projectsRef={this.projectsRef} />
             </div>
             <div
               className="container"
@@ -82,7 +133,7 @@ class HomeView extends React.Component {
                 marginBottom: "200px"
               }}
             >
-              <Practice />
+              <Practice frameWorksRef={this.frameWorksRef} />
             </div>
             <Contact />
           </main>

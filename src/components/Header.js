@@ -12,55 +12,9 @@ var scrollSpy = Scroll.scrollSpy;
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      scrollClass: "navbar opaque-navbar fixed-top"
-    };
-    this.handleScroll = this.handleScroll.bind(this);
-    this.handleClickExp = this.handleClickExp.bind(this);
-    this.handleClickProj = this.handleClickProj.bind(this);
-    this.handleClickPrac = this.handleClickPrac.bind(this);
-    this.handleClickTop = this.handleClickTop.bind(this);
-  }
-  componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
-  }
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
-  scrollTo(pos) {
-    scroll.scrollTo(pos, {
-      duration: 1500,
-      delay: 50,
-      smooth: "easeInOutQuad"
-    });
+    this.state = {};
   }
 
-  handleScroll(e) {
-    var pageY = window.scrollY;
-    console.log(pageY);
-    if (pageY > 100 && pageY < 1000) {
-      this.setState({ scrollClass: "navbar opaque-navbar opaque fixed-top" });
-    } else if (pageY >= 1000 && pageY < 2400) {
-      this.setState({ scrollClass: "navbar opaque-navbar red fixed-top" });
-    } else if (pageY >= 2400) {
-      this.setState({ scrollClass: "navbar opaque-navbar green fixed-top" });
-    } else {
-      console.log("at top");
-      this.setState({ scrollClass: "navbar opaque-navbar fixed-top" });
-    }
-  }
-  handleClickTop(e) {
-    this.scrollTo(0);
-  }
-  handleClickExp(e) {
-    this.scrollTo(1260);
-  }
-  handleClickProj(e) {
-    this.scrollTo(2260);
-  }
-  handleClickPrac(e) {
-    this.scrollTo(3116);
-  }
   render() {
     let { scrollClass } = this.state;
     return (
@@ -79,22 +33,19 @@ class Header extends React.Component {
           <div className="navbar-nav">
             <a
               className="nav-item nav-link customNav"
-              href="#"
-              onClick={this.handleClickExp}
+              onClick={this.props.scrollToExperience}
             >
               Experience
             </a>
             <a
               className="nav-item nav-link customNav"
-              href="#"
-              onClick={this.handleClickProj}
+              onClick={this.props.scrollToProjects}
             >
               Projects
             </a>
             <a
               className="nav-item nav-link customNav"
-              href="#"
-              onClick={this.handleClickPrac}
+              onClick={this.props.scrollToFrameworks}
             >
               Frameworks
             </a>

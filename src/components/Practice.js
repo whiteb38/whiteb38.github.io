@@ -22,7 +22,10 @@ class Practice extends React.Component {
     var cardBlockStyle = { padding: "10px" };
     return (
       <div>
-        <div style={{ margin: "auto", width: "200px" }}>
+        <div
+          style={{ margin: "auto", width: "200px" }}
+          ref={this.props.frameWorksRef}
+        >
           <h1 style={{ color: "white" }}>Frameworks</h1>
         </div>
         <div style={{ paddingBottom: "30px" }}>

@@ -31,7 +31,10 @@ class Projects extends React.Component {
     AOS.init();
     return (
       <div>
-        <div style={{ margin: "auto", width: "130px" }}>
+        <div
+          style={{ margin: "auto", width: "130px" }}
+          ref={this.props.projectsRef}
+        >
           <h1 style={{ color: "white" }}>Projects</h1>
         </div>
         <div style={{ paddingBottom: "30px" }}>

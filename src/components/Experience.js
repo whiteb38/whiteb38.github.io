@@ -3,20 +3,36 @@ require("velocity-animate");
 require("velocity-animate/velocity.ui");
 import "aos/dist/aos.css";
 import AOS from "aos";
+import ExperienceRedesign from "./ExperienceRedesign";
 
 class Experience extends React.Component {
   constructor() {
     super();
     this.state = {
-      cardOne: true,
-      cardTwo: true,
+      height: window.innerHeight,
+      width: window.innerWidth,
+      cardOne: false,
+      cardTwo: false,
       cardThree: false,
       cardFour: false
     };
+    this.updateDimensions = this.updateDimensions.bind(this);
     this.setCardOne = this.setCardOne.bind(this);
     this.setCardTwo = this.setCardTwo.bind(this);
     this.setCardThree = this.setCardThree.bind(this);
     this.setCardFour = this.setCardFour.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener("resize", this.updateDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateDimensions);
+  }
+
+  updateDimensions() {
+    this.setState({ height: window.innerHeight, width: window.innerWidth });
   }
 
   setCardOne() {
@@ -56,8 +72,23 @@ class Experience extends React.Component {
     };
     var cardBlockStyle = { padding: "15px" };
 
+    if (this.state.width < 1200) {
+      return (
+        <ExperienceRedesign
+          experienceRef={this.props.experienceRef}
+          cardOne={this.state.cardOne}
+          cardTwo={this.state.cardTwo}
+          cardThree={this.state.cardThree}
+          cardFour={this.state.cardFour}
+          setCardOne={this.setCardOne}
+          setCardTwo={this.setCardTwo}
+          setCardThree={this.setCardThree}
+          setCardFour={this.setCardFour}
+        />
+      );
+    }
     return (
-      <div>
+      <div ref={this.props.experienceRef}>
         <div style={{ margin: "auto", width: "195px" }}>
           <h1 style={{ color: "white" }}>Experience</h1>
         </div>

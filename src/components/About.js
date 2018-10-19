@@ -9,7 +9,7 @@ class About extends React.Component {
     return (
       <div
         style={{
-          height: "50vh",
+          height: "45vh",
           backgroundRepeat: "no-repeat",
           marginTop: "300px"
         }}

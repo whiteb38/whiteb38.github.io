@@ -73,7 +73,7 @@ body {
 }
 
 .customNav {
-  color: white;
+  color: white !important;
   font-size: 14px;
 }
 .customNav:hover {
@@ -166,12 +166,30 @@ body {
   height: auto;
 }
 
+.social-link:hover .overlay {
+  opacity: 0.5;
+}
+
+.overlay {
+  position: absolute;
+  top: 9px;
+  bottom: 0;
+  left: 9px;
+  right: 0;
+  height: 57%;
+  width: 57%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #314455;
+  border-radius: 50%;
+}
+
 .social-list::after {
   content: "";
   display: block;
   width: 1px;
-  height: 90px;
-  background-color: #314455;
+  height: 100px;
+  background-color: white;
   margin: 0px auto;
 }
 
@@ -183,4 +201,51 @@ body {
   background-color: #c96567 !important;
   border-color: #314455 !important;
   color: #314455 !important;
+}
+
+.email {
+  width: 40px;
+  position: fixed;
+  bottom: 0px;
+  right: 40px;
+  color: white;
+}
+
+.emailLinkWrapper {
+  width: 100%;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+}
+.emailLinkWrapper::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 100px;
+  background-color: white;
+  margin: 0px auto;
+  color: white;
+}
+
+.emailLink {
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+  margin: 20px auto;
+  padding: 10px;
+  color: white;
+  display: inline-block;
+  text-decoration-skip-ink: auto;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.emailLink:hover {
+  color: #314455;
 }
