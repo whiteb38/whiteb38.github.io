@@ -26,6 +26,13 @@ body {
   align-items: center;
 }
 
+.header_underline {
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  border-color: white;
+}
+
 .opaque-navbar {
   background-color: rgba(0, 0, 0, 0);
   /* Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)  */

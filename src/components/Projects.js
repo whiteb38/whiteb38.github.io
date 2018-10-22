@@ -32,15 +32,13 @@ class Projects extends React.Component {
     return (
       <div>
         <div
-          style={{ margin: "auto", width: "130px" }}
+          style={{ margin: "auto", width: "143px" }}
           ref={this.props.projectsRef}
         >
           <h1 style={{ color: "white" }}>Projects</h1>
         </div>
         <div style={{ paddingBottom: "30px" }}>
-          <hr
-            style={{ width: "300px", marginLeft: "auto", marginRight: "auto" }}
-          />
+          <hr className="header_underline" />
         </div>
         <div className="row featurette">
           <div className="col-md-6">

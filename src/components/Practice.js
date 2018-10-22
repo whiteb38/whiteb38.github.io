@@ -23,15 +23,13 @@ class Practice extends React.Component {
     return (
       <div>
         <div
-          style={{ margin: "auto", width: "200px" }}
+          style={{ margin: "auto", width: "218px" }}
           ref={this.props.frameWorksRef}
         >
           <h1 style={{ color: "white" }}>Frameworks</h1>
         </div>
         <div style={{ paddingBottom: "30px" }}>
-          <hr
-            style={{ width: "300px", marginLeft: "auto", marginRight: "auto" }}
-          />
+          <hr className="header_underline" />
         </div>
         <div
           className="container marketing"

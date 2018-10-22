@@ -33,9 +33,7 @@ class Experience extends React.Component {
           <h1 style={{ color: "white" }}>Experience</h1>
         </div>
         <div style={{ paddingBottom: "30px" }}>
-          <hr
-            style={{ width: "300px", marginLeft: "auto", marginRight: "auto" }}
-          />
+          <hr className="header_underline" />
         </div>
         <div className="row">
           <div className="col-12" style={{ marginBottom: "20px" }}>

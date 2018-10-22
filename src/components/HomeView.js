@@ -101,7 +101,7 @@ class HomeView extends React.Component {
           <main>
             <div
               className="container"
-              style={{ padding: "20px 50px 20px 50px", marginBottom: "200px" }}
+              style={{ padding: "20px 50px 20px 50px" }}
             >
               <About />
             </div>

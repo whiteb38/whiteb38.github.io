@@ -9,16 +9,15 @@ class About extends React.Component {
     return (
       <div
         style={{
-          height: "45vh",
           backgroundRepeat: "no-repeat",
-          marginTop: "300px"
+          marginTop: "200px"
         }}
       >
         <div className="col-sm-12 d-none d-sm-block">
-          <div id="text" style={{ fontSize: "75px", color: "white" }}>
+          <div id="text" style={{ fontSize: "5.5rem", color: "white" }}>
             Brendon White
           </div>
-          <div style={{ fontSize: "30px", color: "white" }}>
+          <div style={{ fontSize: "2.5em", color: "white" }}>
             <p className="accent-text">
               Front End Engineering / Web Development
             </p>
@@ -33,8 +32,8 @@ class About extends React.Component {
           className="d-block d-sm-none col-sm-12"
           style={{ marginTop: "110px" }}
         >
-          <div style={{ fontSize: "60px", color: "white" }}>Brendon White</div>
-          <div style={{ fontSize: "30px" }}>
+          <div style={{ fontSize: "5em", color: "white" }}>Brendon White</div>
+          <div style={{ fontSize: "2.5em" }}>
             <p className="accent-text">
               Front End Engineering / Web Development
             </p>

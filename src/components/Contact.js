@@ -13,13 +13,11 @@ class Contact extends React.Component {
           background: "#c96567"
         }}
       >
-        <div style={{ margin: "auto", width: "130px" }}>
+        <div style={{ margin: "auto", width: "142px" }}>
           <h1 style={{ color: "white" }}>Contact</h1>
         </div>
         <div style={{ paddingBottom: "10px" }}>
-          <hr
-            style={{ width: "300px", marginLeft: "auto", marginRight: "auto" }}
-          />
+          <hr className="header_underline" />
         </div>
         <div style={{ margin: "auto", width: "225px", paddingBottom: "10px" }}>
           <a
